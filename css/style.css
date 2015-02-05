@@ -1,0 +1,28 @@
+.navbar{
+padding-top:0px;
+height:40px;
+}
+	
+
+    header .container {
+        padding-top: 100px;
+        padding-bottom: 10px;
+
+    }
+
+    header .intro-text .name {
+        font-size: 3.75em;
+       
+    }
+	
+	footer .footer-above{
+ padding-top: 0px;
+	
+	}
+	footer .footer-col {
+    margin-bottom: 10px;
+   
+}
+.text-danger{
+font-size:30px;
+}
