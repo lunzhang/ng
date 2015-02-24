@@ -1,28 +1,94 @@
-.navbar{
-padding-top:0px;
-height:40px;
+.navbar-default {
+background-color:#3e3f3a;
+border-color:#4582ec;
 }
-	
-
-    header .container {
-        padding-top: 100px;
-        padding-bottom: 10px;
-
-    }
-
-    header .intro-text .name {
-        font-size: 3.75em;
-       
-    }
-	
-	footer .footer-above{
- padding-top: 0px;
-	
-	}
-	footer .footer-col {
-    margin-bottom: 10px;
-   
+.nav.navbar-nav.navbar-right li a:hover {
+font-size:20px;
+color:white;
 }
-.text-danger{
+.navbar-default .navbar-brand:hover{
+font-size:25px;
+color:white;
+}
+.fa.fa-fw {
 font-size:30px;
+}
+.fa.fa-fw.fa-github {
+border-radius:150%;
+border-color:red;
+color:#FF33FF;
+}
+.fa.fa-fw.fa-github:hover {
+color:purple;
+}
+.jumbotron {
+background-color:#F0F0F0;
+margin-top:40px;
+margin-bottom:0px;
+}
+h1 {
+border-bottom:2.2px #4582ec solid;
+}
+h2:hover {
+color:#4582ec;
+}
+p {
+font-size:21px;	
+}
+.text-primary {
+font-size:25px;
+}
+img.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.img-circular {
+    border-radius: 50%;
+    width: 220px;
+    height: 220px;
+	background: url(../img/profile.jpg) no-repeat;
+	}
+.BSxSB {
+    background-attachment: fixed;
+    background-position: center; 
+background: url(../img/BSxSB.jpg) no-repeat;
+}
+.LoveBucket {
+    background-attachment: fixed;
+    background-position: center; 
+background: url(../img/LoveBucket.jpg) no-repeat;
+}
+.Lun {
+    background-attachment: fixed;
+    background-position: center; 
+background: url(../img/Lun.png) no-repeat;
+}
+.Lun>.imgText {
+padding:90px;
+background:#f7f7f7;
+opacity:0;
+}
+.DrawOutLoud {
+    background-attachment: fixed;
+    background-position: center; 
+background: url(../img/DrawOutLoud.png) no-repeat;
+}
+.DrawOutLoud>.imgText {
+padding:90px;
+background:#f7f7f7;
+opacity:0;
+}
+.imgText {
+padding:50px;
+background:#f7f7f7;
+opacity:0;
+}
+.imgText:hover {
+opacity:.9;
+}
+footer {
+background-color:#F0F0F0;
+border-color:#4582ec;
+margin-top:25px;
 }
