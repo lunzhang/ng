@@ -92,3 +92,14 @@ background-color:#F0F0F0;
 border-color:#4582ec;
 margin-top:25px;
 }
+
+@media (max-width: 767px) {
+h3 {
+font-size:28px;
+}
+p {
+font-size:16px;
+}
+
+}
+
