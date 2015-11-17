@@ -1,3 +1,6 @@
+.navbar{
+  margin-bottom:0px;
+}
 .navbar-default {
 background-color:#3e3f3a;
 border-color:#4582ec;
@@ -23,7 +26,6 @@ color:purple;
 }
 .jumbotron {
 background-color:#F0F0F0;
-margin-top:40px;
 margin-bottom:0px;
 }
 h1 {
@@ -33,7 +35,7 @@ h2:hover {
 color:#4582ec;
 }
 p {
-font-size:21px;	
+font-size:21px;
 }
 .text-primary {
 font-size:25px;
@@ -51,17 +53,17 @@ img.center {
 	}
 .BSxSB {
     background-attachment: fixed;
-    background-position: center; 
+    background-position: center;
 background: url(../img/BSxSB.png) no-repeat;
 }
 .LoveBucket {
     background-attachment: fixed;
-    background-position: center; 
+    background-position: center;
 background: url(../img/LoveBucket.png) no-repeat;
 }
 .Lun {
     background-attachment: fixed;
-    background-position: center; 
+    background-position: center;
 background: url(../img/Lun.png) no-repeat;
 }
 .Lun>.imgText {
@@ -71,7 +73,7 @@ opacity:0;
 }
 .DrawOutLoud {
     background-attachment: fixed;
-    background-position: center; 
+    background-position: center;
 background: url(../img/DrawOutLoud.png) no-repeat;
 }
 .DrawOutLoud>.imgText {
@@ -102,4 +104,3 @@ font-size:16px;
 }
 
 }
-
