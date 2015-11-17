@@ -1,4 +1,5 @@
 html,body,.content{
+  background: black;
   height:100%;
 }
 .fa.fa-fw {
@@ -39,6 +40,7 @@ img.center {
   width: 220px;
   height: 220px;
   background: url(../img/profile.jpg) no-repeat;
+  background-position: 50% 0%;
 }
 .main-content{
   position: absolute;
@@ -52,7 +54,6 @@ img.center {
   top: 100%;
   left: 50%;
   transform: translateX(-50%) translateY(-100%);
-  background-color: black;
 }
 .upper-content{
   z-index: 1;
@@ -73,4 +74,34 @@ img.center {
 .info{
   height: 100%;
   background-color: black;
+}
+.circle {
+  display:block;
+  position:absolute;
+  height: 30;
+  width: 30;
+  background-color: white;
+  -moz-border-radius: 30px;
+  -webkit-border-radius: 30px;
+  border-radius: 30px;
+  z-index: 10;
+}
+/*small view*/
+@media(max-width:760px){
+  .upper-content a{
+    font-size:1em;
+  }
+  .upper-content a:hover{
+    font-size:1.5em;
+  }
+  h1{
+    font-size:2em;
+  }
+  .img-circular{
+    width: 160px;
+    height: 160px;
+  }
+  h3{
+    font-size:1em;
+  }
 }
