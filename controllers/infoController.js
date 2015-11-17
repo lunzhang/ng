@@ -5,7 +5,7 @@ app.controller('infoController', function($scope,$timeout,$interval) {
    var animator;
    $scope.stillCircle = []
 
-   for(var i = 0; i < 50;i++){
+   for(var i = 0; i < 30;i++){
      $scope.stillCircle.push(createObject());
    }
 
@@ -15,7 +15,7 @@ animator = $interval(function(){
 },30);
 function tick(objects) {
     var now = new Date().getTime();
-    for (var index = 0; index < 10; index++) {
+    for (var index = 0; index < 5; index++) {
       var object = objects[index];
       var elapsed = (object.timestamp || now) - now;
       var maxX = width-object.size;
@@ -44,7 +44,7 @@ function tick(objects) {
 
    //creates an object
 function createObject() {
-  var maxVelocity = .25;
+  var maxVelocity = .15;
   var size = 5;
   var maxX = width-size;
   var maxY = height-size;
