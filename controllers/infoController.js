@@ -4,13 +4,13 @@ app.controller('infoController', function($scope,$interval) {
   var height = window.innerHeight;
   var animator;
   var numCircle = 30;
-  movingCircle=[0,1,2];
+  movingCircle=[0,1,2,3,4];
   $scope.stillCircle = []
 
   for(var i = 0; i < numCircle;i++){
     $scope.stillCircle.push(createObject());
   }
-  for(var i = 0; i < 3;i++){
+  for(var i = 0; i < 5;i++){
     $scope.stillCircle[i].color = '#EF2020';
   }
 
@@ -20,7 +20,7 @@ app.controller('infoController', function($scope,$interval) {
   },30);
   function tick(objects) {
     var now = new Date().getTime();
-    for (var index = 0; index < 3; index++) {
+    for (var index = 0; index < 5; index++) {
       var object = objects[movingCircle[index]];
       var elapsed = (object.timestamp || now) - now;
       var maxX = width-object.size;
@@ -49,7 +49,7 @@ app.controller('infoController', function($scope,$interval) {
 
   //creates an object
   function createObject() {
-    var maxVelocity = .1;
+    var maxVelocity = .05;
     var size = 5;
     var maxX = width-size;
     var maxY = height-size;
