@@ -14,7 +14,7 @@ html,body,.content{
   color:purple;
 }
 h1,h2,h3,h4,h5,h6{
-   font-family: 'Nunito', sans-serif;
+  font-family: 'Nunito', sans-serif;
 }
 h1 {
   border-bottom:2.2px #4582ec solid;
@@ -93,6 +93,20 @@ img.center {
   }
   .upper-content a:hover{
     font-size:1.5em;
+  }
+  .main-content{
+    padding-top: 75px;
+    position: relative;
+    top:auto;
+    left:auto;
+    transform: none;
+  }
+  .bottom-content{
+    position: relative;
+    text-align: center;
+    top:auto;
+    left:auto;
+    transform: none;
   }
   h1{
     font-size:2em;
