@@ -26,6 +26,13 @@ app.controller('infoController', function($scope,$interval) {
       object.timestamp = now;
       object.x += elapsed * object.velX;
       object.y += elapsed * object.velY;
+      object.size += object.sizeCounter;
+      if(object.size > 50){
+        object.sizeCounter = -.05;
+      }
+      else if(object.size < 1){
+          object.sizeCounter = .05;
+      }
       if (object.x > maxX || object.x < 0 || object.y > maxY || object.y < 0) {
         var randomCircle = Math.floor(Math.random() * numCircle);
         while(movingCircle.indexOf(randomCircle)>-1){
@@ -47,11 +54,12 @@ app.controller('infoController', function($scope,$interval) {
   //creates an object
   function createObject() {
     var maxVelocity = .05;
-    var size = 5;
+    var size = (Math.random() * 20)+5;
     var maxX = width-size;
     var maxY = height-size;
     return {
       size:size,
+      sizeCounter:.05,
       color:'white',
       x:(Math.random() * maxX),
       y:(Math.random() * maxY),

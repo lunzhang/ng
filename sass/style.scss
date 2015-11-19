@@ -12,14 +12,10 @@ html,body,.content{
   height: 100%;
   background-color: black;
   .circle {
+    opacity: .7;
     display:block;
     position:absolute;
-    height: 30;
-    width: 30;
     background-color: white;
-    -moz-border-radius: 30px;
-    -webkit-border-radius: 30px;
-    border-radius: 30px;
     z-index: 10;
   }
   .fa.fa-fw {
@@ -128,6 +124,6 @@ html,body,.content{
 
 .blog{
   .navbar{
-  border:none;
-}
+    border:none;
+  }
 }

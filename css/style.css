@@ -6,14 +6,10 @@ html, body, .content {
   background-color: black;
   /*small view*/ }
   .info .circle {
+    opacity: .7;
     display: block;
     position: absolute;
-    height: 30;
-    width: 30;
     background-color: white;
-    -moz-border-radius: 30px;
-    -webkit-border-radius: 30px;
-    border-radius: 30px;
     z-index: 10; }
   .info .fa.fa-fw {
     font-size: 30px; }
