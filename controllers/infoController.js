@@ -27,7 +27,7 @@ app.controller('infoController', function($scope,$interval) {
       object.x += elapsed * object.velX;
       object.y += elapsed * object.velY;
       object.size += object.sizeCounter;
-      if(object.size > 50){
+      if(object.size > 30){
         object.sizeCounter = -.05;
       }
       else if(object.size < 1){
