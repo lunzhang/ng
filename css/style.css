@@ -90,5 +90,18 @@ html, body, .content {
     .info h3 {
       font-size: 1em; } }
 
+.blog h1, .blog h2, .blog h3, .blog h4, .blog h5, .blog h6, .blog a {
+  font-family: 'Nunito', sans-serif;
+  color: black !important; }
+
 .blog .navbar {
-  border: none; }
+  position: absolute;
+  border: none;
+  background: none; }
+
+.blog .main-content {
+  background: url(../img/mainbg.jpg) no-repeat;
+  background-position: 50% 90%;
+  background-size: 100% 175%;
+  height: 400px;
+  opacity: .25; }
