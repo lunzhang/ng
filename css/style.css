@@ -1,5 +1,4 @@
 html,body,.content{
-  background: black;
   height:100%;
 }
 .fa.fa-fw {
@@ -118,4 +117,7 @@ img.center {
   h3{
     font-size:1em;
   }
+}
+.blog.navbar{
+  border:none;
 }

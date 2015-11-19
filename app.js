@@ -6,5 +6,9 @@ app.config(function($routeProvider) {
     templateUrl: 'templates/info.html',
     controller: 'infoController'
   })
+  .when('/blog', {
+    templateUrl: 'templates/blog.html',
+    controller: 'blogController'
+  })
   .otherwise({ redirectTo: '/info'});
 });
