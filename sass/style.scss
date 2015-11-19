@@ -1,6 +1,6 @@
 @import "../lib/bootstrap/stylesheets/bootstrap";
 
-$xs-only: (max-width: 767px);
+$xs-only: "(max-width: 760px)";
 $small-only: "(min-width:768px) and (max-width:991px)";
 $medium-only: "(min-width:992px) and (max-width:1199px)";
 $large-only: "(min-width:1200px)";
@@ -8,123 +8,127 @@ $large-only: "(min-width:1200px)";
 html,body,.content{
   height:100%;
 }
-.fa.fa-fw {
-  font-size:30px;
-}
-.fa.fa-fw.fa-github {
-  border-radius:150%;
-  border-color:red;
-  color:#FF33FF;
-}
-.fa.fa-fw.fa-github:hover {
-  color:purple;
-}
-h1,h2,h3,h4,h5,h6{
-  font-family: 'Nunito', sans-serif;
-}
-h1 {
-  border-bottom:2.2px #4582ec solid;
-  color:#A56262;
-}
-h2{
-  color:#E3ECFF;
-}
-h2:hover {
-  color:#4582ec;
-}
-h3{
-  font-size:1.5em;
-  color:#E3ECFF;
-}
-img.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-.img-circular {
-  border-radius: 50%;
-  width: 220px;
-  height: 220px;
-  background: url(../img/profile.jpg) no-repeat;
-  background-position: 50% 0%;
-}
-.main-content{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  background-color: black;
-}
-.bottom-content{
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-100%);
-}
-.upper-content{
-  z-index: 1;
-  position: absolute;
-  top: 5%;
-  left: 90%;
-  transform: translateX(-90%) translateY(-5%);
-}
-.upper-content a{
-  font-size:1.5em;
-  color:'#4582e';
-}
-.upper-content a:hover{
-  font-size:2em;
-  text-decoration: none;
-  color: white;
-}
+
 .info{
   height: 100%;
   background-color: black;
-}
-.circle {
-  display:block;
-  position:absolute;
-  height: 30;
-  width: 30;
-  background-color: white;
-  -moz-border-radius: 30px;
-  -webkit-border-radius: 30px;
-  border-radius: 30px;
-  z-index: 10;
-}
-/*small view*/
-@media(max-width:760px){
-  .upper-content a{
-    font-size:1em;
+  .circle {
+    display:block;
+    position:absolute;
+    height: 30;
+    width: 30;
+    background-color: white;
+    -moz-border-radius: 30px;
+    -webkit-border-radius: 30px;
+    border-radius: 30px;
+    z-index: 10;
   }
-  .upper-content a:hover{
-    font-size:1.5em;
+  .fa.fa-fw {
+    font-size:30px;
   }
-  .main-content{
-    padding-top: 75px;
-    position: relative;
-    top:auto;
-    left:auto;
-    transform: none;
+  .fa.fa-fw.fa-github {
+    border-radius:150%;
+    border-color:red;
+    color:#FF33FF;
   }
-  .bottom-content{
-    position: relative;
-    text-align: center;
-    top:auto;
-    left:auto;
-    transform: none;
+  .fa.fa-fw.fa-github:hover {
+    color:purple;
   }
-  h1{
-    font-size:2em;
+  h1,h2,h3,h4,h5,h6{
+    font-family: 'Nunito', sans-serif;
   }
-  .img-circular{
-    width: 160px;
-    height: 160px;
+  h1 {
+    border-bottom:2.2px #4582ec solid;
+    color:#A56262;
+  }
+  h2{
+    color:#E3ECFF;
+  }
+  h2:hover {
+    color:#4582ec;
   }
   h3{
-    font-size:1em;
+    font-size:1.5em;
+    color:#E3ECFF;
+  }
+  img.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .img-circular {
+    border-radius: 50%;
+    width: 220px;
+    height: 220px;
+    background: url(../img/profile.jpg) no-repeat;
+    background-position: 50% 0%;
+  }
+  .main-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background-color: black;
+  }
+  .bottom-content{
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-100%);
+  }
+  .upper-content{
+    z-index: 1;
+    position: absolute;
+    top: 5%;
+    left: 90%;
+    transform: translateX(-90%) translateY(-5%);
+  }
+  .upper-content a{
+    font-size:1.5em;
+    color:'#4582e';
+  }
+  .upper-content a:hover{
+    font-size:2em;
+    text-decoration: none;
+    color: white;
+  }
+  /*small view*/
+  @media #{$xs-only}{
+    .upper-content a{
+      font-size:1em;
+    }
+    .upper-content a:hover{
+      font-size:1.5em;
+    }
+    .main-content{
+      padding-top: 75px;
+      position: relative;
+      top:auto;
+      left:auto;
+      transform: none;
+    }
+    .bottom-content{
+      position: relative;
+      text-align: center;
+      top:auto;
+      left:auto;
+      transform: none;
+    }
+    h1{
+      font-size:2em;
+    }
+    .img-circular{
+      width: 160px;
+      height: 160px;
+    }
+    h3{
+      font-size:1em;
+    }
   }
 }
-.blog.navbar{
+
+.blog{
+  .navbar{
   border:none;
+}
 }
