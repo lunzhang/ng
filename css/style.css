@@ -26,8 +26,6 @@ html, body, .content {
     color: #A56262; }
   .info h2 {
     color: #E3ECFF; }
-  .info h2:hover {
-    color: #4582ec; }
   .info h3 {
     font-size: 1.5em;
     color: #E3ECFF; }
@@ -36,27 +34,36 @@ html, body, .content {
     margin-left: auto;
     margin-right: auto; }
   .info .img-circular {
+    opacity: .6;
     border-radius: 50%;
     width: 220px;
     height: 220px;
     background: url(../img/profile.jpg) no-repeat;
     background-position: 50% 0%; }
+  .info .img-circular:hover {
+    opacity: 1; }
   .info .main-content {
     position: absolute;
     top: 50%;
     left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
     background-color: black; }
   .info .bottom-content {
     position: absolute;
     top: 100%;
     left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-100%);
+    -ms-transform: translateX(-50%) translateY(-100%);
     transform: translateX(-50%) translateY(-100%); }
   .info .upper-content {
     z-index: 1;
     position: absolute;
     top: 5%;
     left: 90%;
+    -webkit-transform: translateX(-90%) translateY(-5%);
+    -ms-transform: translateX(-90%) translateY(-5%);
     transform: translateX(-90%) translateY(-5%); }
   .info .upper-content a {
     font-size: 1.5em;
@@ -75,12 +82,16 @@ html, body, .content {
       position: relative;
       top: auto;
       left: auto;
+      -webkit-transform: none;
+      -ms-transform: none;
       transform: none; }
     .info .bottom-content {
       position: relative;
       text-align: center;
       top: auto;
       left: auto;
+      -webkit-transform: none;
+      -ms-transform: none;
       transform: none; }
     .info h1 {
       font-size: 2em; }
@@ -90,18 +101,46 @@ html, body, .content {
     .info h3 {
       font-size: 1em; } }
 
+.blog .container {
+  position: relative; }
+  .blog .container .row {
+    position: relative; }
+
 .blog h1, .blog h2, .blog h3, .blog h4, .blog h5, .blog h6, .blog a {
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Times New Roman', sans-serif;
   color: black !important; }
 
 .blog .navbar {
-  position: absolute;
-  border: none;
-  background: none; }
+  position: relative;
+  margin: 0; }
+  .blog .navbar h1, .blog .navbar h2, .blog .navbar h3, .blog .navbar h4, .blog .navbar h5, .blog .navbar h6, .blog .navbar a {
+    font-family: 'Times New Roman', sans-serif; }
 
 .blog .main-content {
-  background: url(../img/mainbg.jpg) no-repeat;
-  background-position: 50% 90%;
-  background-size: 100% 175%;
   height: 400px;
-  opacity: .25; }
+  position: relative; }
+
+.blog .main-wrapper {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%); }
+  .blog .main-wrapper img {
+    position: relative;
+    vertical-align: middle; }
+  .blog .main-wrapper h3 {
+    padding: 10px 10px 10px 10px;
+    background: rgba(53, 47, 47, 0.75); }
+  .blog .main-wrapper h1, .blog .main-wrapper h2, .blog .main-wrapper h3, .blog .main-wrapper h4, .blog .main-wrapper h5, .blog .main-wrapper h6, .blog .main-wrapper a {
+    font-family: 'Times New Roman', sans-serif;
+    color: white !important; }
+
+.blog .main-bg {
+  position: absolute;
+  background: url(../img/mainbg.jpg) no-repeat;
+  background-position: 50% 100%;
+  background-size: 100% 150%;
+  height: 100%;
+  width: 100%;
+  opacity: .6; }
