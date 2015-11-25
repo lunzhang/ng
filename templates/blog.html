@@ -1,6 +1,6 @@
 <div class="blog">
   <!-- Navigation -->
-   <nav class="navbar navbar-default">
+  <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header page-scroll">
@@ -17,10 +17,10 @@
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
           <li class="page-scroll">
-            <a href=""ng-click="scrollTo('portfolio')">Open</a>
+            <a href=""ng-click="scrollTo('open')">Open</a>
           </li>
           <li class="page-scroll">
-            <a href="#blog#about">Sold</a>
+              <a href=""ng-click="scrollTo('sold')">Sold</a>
           </li>
         </ul>
       </div>
@@ -34,25 +34,132 @@
     <div class="main-wrapper">
       <div class="container">
         <div class="row">
-          <div class="col-sm-6 text-center ">
+          <div class="col-sm-6 text-center vertical-middle  ">
             <img src="img/profile.jpg" />
           </div>
-          <div class="col-sm-6 text-center">
+          <div class="col-sm-6 text-center vertical-middle">
             <h3>Hi, I'm Lun.  I'm a computer science student at Stony Brook University and is graduating in Dec,2015.  I'm a web developer with mobile experience.</h3>
           </div>
-        </div>
-  </div>
-    </div>
-</div>
-  <!-- Portfolio Grid Section -->
-  <div id="portfolio">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <h2>Current Open Houses</h2>
         </div>
       </div>
     </div>
   </div>
+  <!-- Portfolio Grid Section -->
+  <div id="open">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="open">Open Houses</h2>
+        </div>
+        <div class="col-lg-8 col-lg-push-2">
+          <table class="table" >
+            <thead>
+              <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Email</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>John</td>
+                <td>Doe</td>
+                <td>john@example.com</td>
+              </tr>
+              <tr>
+                <td>Mary</td>
+                <td>Moe</td>
+                <td>mary@example.com</td>
+              </tr>
+              <tr>
+                <td>July</td>
+                <td>Dooley</td>
+                <td>july@example.com</td>
+              </tr>
+              <tr>
+                <td>John</td>
+                <td>Doe</td>
+                <td>john@example.com</td>
+              </tr>
+              <tr>
+                <td>Mary</td>
+                <td>Moe</td>
+                <td>mary@example.com</td>
+              </tr>
+              <tr>
+                <td>July</td>
+                <td>Dooley</td>
+                <td>july@example.com</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
+      </div>
+            <hr/>
+    </div>
+  </div>
+
+
+  <div id="sold">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="sold">Sold Houses</h2>
+        </div>
+        <div class="col-lg-8 col-lg-push-2">
+          <table class="table" >
+            <thead>
+              <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Email</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>John</td>
+                <td>Doe</td>
+                <td>john@example.com</td>
+              </tr>
+              <tr>
+                <td>Mary</td>
+                <td>Moe</td>
+                <td>mary@example.com</td>
+              </tr>
+              <tr>
+                <td>July</td>
+                <td>Dooley</td>
+                <td>july@example.com</td>
+              </tr>
+              <tr>
+                <td>John</td>
+                <td>Doe</td>
+                <td>john@example.com</td>
+              </tr>
+              <tr>
+                <td>Mary</td>
+                <td>Moe</td>
+                <td>mary@example.com</td>
+              </tr>
+              <tr>
+                <td>July</td>
+                <td>Dooley</td>
+                <td>july@example.com</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                  <p class="copyright">Copyright &copy; Lun Zhang 2014</p>
+              </div>
+          </div>
+      </div>
+  </footer>
 </div>

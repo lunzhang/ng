@@ -102,35 +102,38 @@ html, body, .content {
       font-size: 1em; } }
 
 .blog .container {
-  position: relative; }
-  .blog .container .row {
-    position: relative; }
-
-.blog h1, .blog h2, .blog h3, .blog h4, .blog h5, .blog h6, .blog a {
-  font-family: 'Times New Roman', sans-serif;
-  color: black !important; }
-
-.blog .navbar {
   position: relative;
-  margin: 0; }
-  .blog .navbar h1, .blog .navbar h2, .blog .navbar h3, .blog .navbar h4, .blog .navbar h5, .blog .navbar h6, .blog .navbar a {
-    font-family: 'Times New Roman', sans-serif; }
+  height: 100%; }
+  .blog .container .row {
+    position: relative;
+    height: 100%; }
+
+.blog .sold {
+  color: #E18585; }
+
+.blog .open {
+  color: #4D9AE7; }
+
+.blog h1, .blog h3, .blog h4, .blog h5, .blog h6 {
+  color: #464646; }
+
+.blog .navbar-default .navbar-nav > li > a {
+  color: white; }
 
 .blog .main-content {
-  height: 400px;
+  height: 500px;
+  margin-top: 65px;
   position: relative; }
 
 .blog .main-wrapper {
   position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%); }
+  height: 100%; }
   .blog .main-wrapper img {
     position: relative;
-    vertical-align: middle; }
+    width: 60%;
+    border-radius: 50%; }
   .blog .main-wrapper h3 {
-    padding: 10px 10px 10px 10px;
+    padding: 50px;
     background: rgba(53, 47, 47, 0.75); }
   .blog .main-wrapper h1, .blog .main-wrapper h2, .blog .main-wrapper h3, .blog .main-wrapper h4, .blog .main-wrapper h5, .blog .main-wrapper h6, .blog .main-wrapper a {
     font-family: 'Times New Roman', sans-serif;
@@ -144,3 +147,30 @@ html, body, .content {
   height: 100%;
   width: 100%;
   opacity: .6; }
+
+.blog .table {
+  border: 1px solid #000000; }
+
+.blog .table > thead > tr > th, .blog .table > tbody > tr > th,
+.blog .table > tfoot > tr > th, .blog .table > thead > tr > td,
+.blog .table > tbody > tr > td, .blog .table > tfoot > tr > td {
+  border-top: 1px solid black; }
+
+.blog .table > thead > tr > th {
+  border-bottom: 2px solid black; }
+
+.blog .navbar-default {
+  background-color: #212020; }
+  .blog .navbar-default .navbar-brand {
+    font-size: 35px;
+    padding: 0;
+    color: #89A9E1; }
+
+.blog hr {
+  border-top: 1px solid #89A9E1; }
+
+.blog .vertical-middle {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%); }

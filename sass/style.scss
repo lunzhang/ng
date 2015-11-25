@@ -134,55 +134,83 @@ html,body,.content{
 }
 
 .blog{
-.container{
-  position: relative;
-  .row{
+  .container{
+    position: relative;
+    height: 100%;
+    .row{
+      position: relative;
+      height: 100%;
+    }
+  }
+  .sold{
+    color: #E18585;
+  }
+  .open{
+    color:#4D9AE7;
+  }
+  h1,h3,h4,h5,h6  {
+    color: #464646;
+  }
+  .navbar-default .navbar-nav>li>a{
+    color: white;
+  }
+  .main-content{
+    height: 500px;
+    margin-top: 65px;
     position: relative;
   }
-}
-
-  h1,h2,h3,h4,h5,h6,a{
-    font-family: 'Times New Roman', sans-serif;
-    color: black !important;
-  }
-  .navbar{
+  .main-wrapper{
+    position: relative;
+    height:100%;
+    img{
+      position: relative;
+      width:60%;
+      border-radius: 50%;
+    }
+    h3{
+      padding: 50px;
+      background: rgba(53,47,47,.75);
+    }
     h1,h2,h3,h4,h5,h6,a{
       font-family: 'Times New Roman', sans-serif;
+      color: white !important;
     }
-    position: relative;
-    margin: 0;  }
-
-  .main-content{
-
-    height: 400px;
-    position: relative;
-    }
-    .main-wrapper{
-      position: relative;
-      top: 50%;
-      -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-      transform: translateY(-50%);
-      img{
-        position: relative;
-        vertical-align: middle;
-      }
-    h3{
-      padding: 10px 10px 10px 10px;
-        background: rgba(53,47,47,.75);
-    }
-      h1,h2,h3,h4,h5,h6,a{
-        font-family: 'Times New Roman', sans-serif;
-        color: white !important;
-      }
-    }
+  }
   .main-bg{
     position: absolute;
-      background: url(../img/mainbg.jpg) no-repeat;
-      background-position: 50% 100%;
-      background-size: 100% 150%;
-      height: 100%;
-      width: 100%;
+    background: url(../img/mainbg.jpg) no-repeat;
+    background-position: 50% 100%;
+    background-size: 100% 150%;
+    height: 100%;
+    width: 100%;
     opacity: .6;
+  }
+  .table{
+    border: 1px solid #000000;
+  }
+  .table>thead>tr>th, .table>tbody>tr>th,
+  .table>tfoot>tr>th, .table>thead>tr>td,
+  .table>tbody>tr>td, .table>tfoot>tr>td {
+    border-top: 1px solid black;
+  }
+  .table>thead>tr>th {
+    border-bottom: 2px solid black;
+  }
+  .navbar-default{
+    .navbar-brand{
+      font-size:35px;
+      padding: 0;
+      color:#89A9E1;
+    }
+    background-color:#212020;
+  }
+  hr{
+    border-top: 1px solid #89A9E1;
+  }
+  .vertical-middle{
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
   }
 }
