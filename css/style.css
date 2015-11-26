@@ -174,3 +174,14 @@ html, body, .content {
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%); }
+
+@media (max-width: 760px) {
+  .blog .vertical-middle {
+    top: auto;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+    margin-top: 15px; }
+  .blog .main-wrapper h3 {
+    font-size: 24px;
+    padding: 20px; } }

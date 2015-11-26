@@ -213,4 +213,20 @@ html,body,.content{
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
   }
+  @media #{$xs-only}{
+    .vertical-middle{
+      top:auto;
+      -webkit-transform: none;
+      -ms-transform: none;
+      transform: none;
+      margin-top:15px;
+    }
+    .main-wrapper{
+      h3{
+        font-size: 24px;
+        padding: 20px;
+      }
+    }
+  }
+
 }
