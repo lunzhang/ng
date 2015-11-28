@@ -131,7 +131,8 @@ html, body, .content {
   .blog .main-wrapper img {
     position: relative;
     width: 60%;
-    border-radius: 50%; }
+    border-radius: 50%;
+    max-width: 300px; }
   .blog .main-wrapper h3 {
     padding: 50px;
     background: rgba(53, 47, 47, 0.75); }
