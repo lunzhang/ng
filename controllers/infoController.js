@@ -2,69 +2,106 @@ app.controller('infoController', function($scope,$interval) {
   //global variables
   var width  = window.innerWidth;
   var height = window.innerHeight;
-  var animator;
-  var numCircle = 30;
-  movingCircle=[0,1];
-  $scope.stillCircle = []
-
-  for(var i = 0; i < numCircle;i++){
-    $scope.stillCircle.push(createObject());
+  var area = width*height;
+  if(area<160000){
+    var numCircle = 10;
   }
+  else if(area > 750000){
+    var numCircle = 22;
+  }
+  var animator;
+  $scope.circles = [];
 
+  //populate circles
+  for(var id = 0; id < numCircle;id++){
+    $scope.circles.push(createObject(id));
+  }
 
   //animate the objects in the array
   animator = $interval(function(){
-    tick($scope.stillCircle);
+    move($scope.circles);
+    collision($scope.circles);
   },30);
-  function tick(objects) {
-    var now = new Date().getTime();
-    for (var index = 0; index < 2; index++) {
-      var object = objects[movingCircle[index]];
+
+  //updates circles location
+  function move(objects) {
+    for (var index = 0; index < objects.length; index++) {
+      var now = new Date().getTime();
+      var object = objects[index];
       var elapsed = (object.timestamp || now) - now;
       var maxX = width-object.size;
       var maxY = height-object.size;
       object.timestamp = now;
       object.x += elapsed * object.velX;
       object.y += elapsed * object.velY;
-      object.size += object.sizeCounter;
-      if(object.size > 30){
-        object.sizeCounter = -.05;
+      if (object.x > maxX) {
+        object.x = maxX;
+        object.velX *= -1;
       }
-      else if(object.size < 1){
-          object.sizeCounter = .05;
+      else if (object.x < 0) {
+        object.x = 0
+        object.velX *= -1;
       }
-      if (object.x > maxX || object.x < 0 || object.y > maxY || object.y < 0) {
-        var randomCircle = Math.floor(Math.random() * numCircle);
-        while(movingCircle.indexOf(randomCircle)>-1){
-          randomCircle = Math.floor(Math.random() * numCircle);
-        }
-        movingCircle[index] = randomCircle;
-        var newObject = objects[randomCircle];
-        var plusOrMinus = Math.random() < 0.5 ? -1 : 1;
-        newObject.velX = plusOrMinus * newObject.velX;
-        newObject.velY = plusOrMinus * newObject.velY;
-        object.x = (Math.random() * maxX);
-        object.y = (Math.random() * maxY);
-        object.color = 'white';
-
+      if (object.y > maxY) {
+        object.y = maxY;
+        object.velY *= -1;
+      }
+      else if (object.y < 0) {
+        object.y = 0;
+        object.velY *= -1;
       }
     }
   };
 
+  //check for collision
+  function collision(objects){
+    for(var index = 0; index < objects.length; index++){
+      var object = objects[index];
+      object.detectCollision(objects);
+    }
+  };
+
   //creates an object
-  function createObject() {
-    var maxVelocity = .05;
-    var size = (Math.random() * 20)+5;
+  function createObject(id) {
+    var maxVelocity = .2;
+    var size = 22;
     var maxX = width-size;
     var maxY = height-size;
     return {
+      id:id,
       size:size,
-      sizeCounter:.05,
       color:'white',
       x:(Math.random() * maxX),
       y:(Math.random() * maxY),
-      velX:(Math.random() * maxVelocity),
-      velY:(Math.random() * maxVelocity)
+      maxVelocity: maxVelocity,
+      velX:Math.random() * maxVelocity * (Math.random() < 0.5 ? -1 : 1),
+      velY:Math.random() * maxVelocity * (Math.random() < 0.5 ? -1 : 1),
+      detectCollision: function(objects){
+        for(var index = 0; index < objects.length; index++){
+          var object = objects[index];
+          if(object !=this ){
+            var dx = object.x - this.x;
+            var dy = object.y - this.y;
+            var distance = Math.sqrt(dx * dx + dy * dy);
+            var maxDistance = object.size/2 + this.size/2;
+            if (distance < maxDistance) {
+              while(distance < maxDistance){
+                object.x += object.velX;
+                object.y += object.velY;
+                this.x += this.velX;
+                this.y += this.velY;
+                dx = object.x - this.x;
+                dy = object.y - this.y;
+                distance = Math.sqrt(dx * dx + dy * dy);
+              }
+              this.velX *=-1;
+              this.velY *=-1;
+              object.velX *=-1;
+              object.velY *=-1;
+            }
+          }
+        }
+      }
     };
   };
 
