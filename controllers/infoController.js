@@ -3,10 +3,10 @@ app.controller('infoController', function($scope,$interval) {
   var width  = window.innerWidth;
   var height = window.innerHeight;
   var area = width*height;
-  if(area<160000){
+  if(area<750000){
     var numCircle = 10;
   }
-  else if(area > 750000){
+  else{
     var numCircle = 22;
   }
   var animator;
