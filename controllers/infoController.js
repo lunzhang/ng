@@ -63,7 +63,7 @@ app.controller('infoController', function($scope,$interval) {
 
   //creates an object
   function createObject(id) {
-    var maxVelocity = .2;
+    var maxVelocity = .1;
     var size = 22;
     var maxX = width-size;
     var maxY = height-size;
