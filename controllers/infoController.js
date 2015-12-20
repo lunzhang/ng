@@ -1,7 +1,20 @@
-app.controller('infoController', function($scope,$interval) {
+app.controller('infoController', function($scope,$interval,$document) {
   //global variables
-  var width  = window.innerWidth;
-  var height = window.innerHeight;
+  var width  = jQuery(document).outerWidth();
+  var height = jQuery(document).outerHeight();
+
+  $scope.$watch( function(){
+    return jQuery(document).outerHeight();
+  }, function(value) {
+      height = value;
+  });
+
+  $scope.$watch( function(){
+    return jQuery(document).outerWidth();
+  }, function(value) {
+      width = value;
+  });
+
   var area = width*height;
   if(area<750000){
     var numCircle = 10;
