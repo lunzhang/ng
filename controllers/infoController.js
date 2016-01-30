@@ -3,18 +3,6 @@ app.controller('infoController', function($scope,$interval,$document) {
   var width  = jQuery(document).outerWidth();
   var height = jQuery(document).outerHeight();
 
-  $scope.$watch( function(){
-    return jQuery(document).outerHeight();
-  }, function(value) {
-      height = value;
-  });
-
-  $scope.$watch( function(){
-    return jQuery(document).outerWidth();
-  }, function(value) {
-      width = value;
-  });
-
   var area = width*height;
   if(area<750000){
     var numCircle = 10;
@@ -23,12 +11,26 @@ app.controller('infoController', function($scope,$interval,$document) {
     var numCircle = 22;
   }
   var animator;
+
+  $scope.$watch( function(){
+    return jQuery(document).outerHeight();
+  }, function(value) {
+    height = value;
+    $scope.circles = [];
+    addObjects(numCircle);
+  });
+
+  $scope.$watch( function(){
+    return jQuery(document).outerWidth();
+  }, function(value) {
+    width = value;
+    $scope.circles = [];
+    addObjects(numCircle);
+  });
+
   $scope.circles = [];
 
-  //populate circles
-  for(var id = 0; id < numCircle;id++){
-    $scope.circles.push(createObject(id));
-  }
+  addObjects(numCircle);
 
   //animate the objects in the array
   animator = $interval(function(){
@@ -73,6 +75,13 @@ app.controller('infoController', function($scope,$interval,$document) {
       object.detectCollision(objects);
     }
   };
+
+  function addObjects(numCircle){
+    //populate circles
+    for(var id = 0; id < numCircle;id++){
+      $scope.circles.push(createObject(id));
+    }
+  }
 
   //creates an object
   function createObject(id) {

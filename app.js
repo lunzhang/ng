@@ -11,5 +11,9 @@ app.config(function($routeProvider) {
     templateUrl: 'templates/blog.html',
     controller: 'blogController'
   })
+  .when('/socket', {
+    templateUrl: 'templates/socket.html',
+    controller: 'socketController'
+  })
   .otherwise({ redirectTo: '/info'});
 });
