@@ -1,16 +1,19 @@
 <div class="socket">
-  <div class="container">
+  <div class="container-fluid">
     <div class="row">
       <div class="col-sm-8">
       </div>
-      <div class="col-sm-4">
+      <div class="col-sm-4 chat-wrapper">
         <div class="chat-box">
-          <ul id="messages"></ul>
-          <form>
-            <input id="m" autocomplete="off" /><button>Send</button>
-          </form>
+          <div id="message-box" scroll-glue>
+            <div ng-repeat="message in messages track by $index">
+              {{message}}
+            </div>
+          </div>
+          <textarea id="input-box" maxlength="50" /></textarea>
         </div>
       </div>
     </div>
   </div>
+
 </div>

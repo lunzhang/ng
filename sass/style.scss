@@ -235,3 +235,57 @@ html,body,.content{
   }
 
 }
+
+.socket{
+  height:100%;
+  .container-fluid{
+    height:100%;
+    .row{
+      height:100%;
+    }
+  }
+  .chat-wrapper{
+    position: relative;
+    height: 100%;
+    .chat-box{
+      border:1px solid #848282;
+      background-color: #e5e5e5;
+      padding:10px;
+      top: 10%;
+      left: 0;
+      right: 5%;
+      bottom: 0;
+      height: 80%;
+      position: absolute;
+      #message-box{
+        position: absolute;
+        width: auto!important;
+        height: auto!important;
+        top: 0;
+        bottom: 115px;
+        left: 5%;
+        right: 0;
+        overflow-y: scroll;
+      }
+      #message-box::-webkit-scrollbar {
+        width: 10px;
+      }
+      #message-box::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background-color: grey;
+      }
+      #input-box{
+        resize: none;
+        height:75px;
+        margin: 20px 0px 0px 0px;
+        padding: 0;
+        bottom: 5%;
+        width: 90%;
+        position: absolute;
+        box-sizing: border-box;
+        left: 5%;
+      }
+    }
+  }
+
+}
