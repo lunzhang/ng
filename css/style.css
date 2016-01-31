@@ -199,37 +199,40 @@ html, body, .content {
   .socket .chat-wrapper {
     position: relative;
     height: 100%; }
-    .socket .chat-wrapper .chat-box {
-      border: 1px solid #848282;
-      background-color: #e5e5e5;
-      padding: 10px;
-      top: 10%;
-      left: 0;
-      right: 5%;
-      bottom: 0;
-      height: 80%;
-      position: absolute; }
-      .socket .chat-wrapper .chat-box #message-box {
-        position: absolute;
-        width: auto !important;
-        height: auto !important;
-        top: 0;
-        bottom: 115px;
-        left: 5%;
-        right: 0;
-        overflow-y: scroll; }
-      .socket .chat-wrapper .chat-box #message-box::-webkit-scrollbar {
-        width: 10px; }
-      .socket .chat-wrapper .chat-box #message-box::-webkit-scrollbar-thumb {
-        border-radius: 10px;
-        background-color: grey; }
-      .socket .chat-wrapper .chat-box #input-box {
-        resize: none;
-        height: 75px;
-        margin: 20px 0px 0px 0px;
-        padding: 0;
-        bottom: 5%;
-        width: 90%;
-        position: absolute;
-        box-sizing: border-box;
-        left: 5%; }
+  .socket .chat-box {
+    border: 1px solid #848282;
+    background-color: #e5e5e5;
+    padding: 10px;
+    top: 10%;
+    left: 0;
+    right: 5%;
+    bottom: 0;
+    height: 80%;
+    position: absolute; }
+  .socket #message-box {
+    position: absolute;
+    width: auto !important;
+    height: auto !important;
+    top: 1%;
+    bottom: 115px;
+    left: 5%;
+    right: 0;
+    overflow-y: scroll; }
+  .socket #message-box::-webkit-scrollbar {
+    width: 10px; }
+  .socket #message-box::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: grey; }
+  .socket #input-box {
+    resize: none;
+    height: 75px;
+    margin: 20px 0px 0px 0px;
+    padding: 0;
+    bottom: 5%;
+    width: 90%;
+    position: absolute;
+    box-sizing: border-box;
+    left: 5%; }
+  @media (max-width: 760px) {
+    .socket .chat-box {
+      right: 0; } }
