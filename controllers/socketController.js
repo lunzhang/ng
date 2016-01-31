@@ -1,5 +1,5 @@
 app.controller('socketController', function($scope) {
-  var socket = io();  
+  var socket = io.connect('http://live-lunny93.rhcloud.com:8000/');  
   $('form').submit(function(){
     socket.emit('message', $('#m').val());
     $('#m').val('');
