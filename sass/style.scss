@@ -132,6 +132,15 @@ html,body,.content{
       font-size:1em;
     }
   }
+  .navbar-inverse{
+    background-color: black;
+    border-color: black;
+    z-index: 1;
+    .navbar-nav>li>a{
+      color:white;
+      font-size: 22px;
+    }
+  }
 }
 
 .blog{
@@ -289,6 +298,9 @@ html,body,.content{
   @media #{$xs-only}{
     .chat-box{
       right:0;
+    }
+    .chat-wrapper{
+      height: 300px;
     }
   }
 }

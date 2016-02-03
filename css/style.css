@@ -101,6 +101,13 @@ html, body, .content {
       height: 160px; }
     .info h3 {
       font-size: 1em; } }
+  .info .navbar-inverse {
+    background-color: black;
+    border-color: black;
+    z-index: 1; }
+    .info .navbar-inverse .navbar-nav > li > a {
+      color: white;
+      font-size: 22px; }
 
 .blog .container {
   position: relative;
@@ -235,4 +242,6 @@ html, body, .content {
     left: 5%; }
   @media (max-width: 760px) {
     .socket .chat-box {
-      right: 0; } }
+      right: 0; }
+    .socket .chat-wrapper {
+      height: 300px; } }
