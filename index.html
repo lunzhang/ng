@@ -1,42 +1,46 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html ng-app="app" lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-  <title>Lun Zhang</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Lun Zhang</title>
 
-  <!-- Bootstrap Themes -->
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <!-- Custom CSS -->
-  <link href="css/style.min.css" rel="stylesheet">
-  <!-- Custom Fonts -->
-  <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-  <link href='https://fonts.googleapis.com/css?family=Nunito:300' rel='stylesheet' type='text/css'>
+    <!-- Bootstrap Themes -->
+    <link href="lib/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/style.min.css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Nunito:300' rel='stylesheet' type='text/css'>
 
-  <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
-  <!--Angular-->
-  <script src="js/angular.min.js"></script>
-  <script src="js/angular-route.min.js"></script>
-  <!--Angular router-->
-  <script src="app.js"></script>
-  <!--Controllers-->
-  <script src="controllers/infoController.js"></script>
-  <script src="controllers/blogController.js"></script>
-  <script src="controllers/socketController.js"></script>
-  <!--Controllers-->
-  <script src="directives/circle.js"></script>
-  <!-- jQuery -->
-  <script src="js/jquery.js"></script>
-  <!-- Bootstrap Core JavaScript -->
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/scrollglue.js"></script>
+    <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+    <!--Angular-->
+    <script src="lib/angular/angular.min.js"></script>
+    <!--Angular router-->
+    <script src="ng/app.js"></script>
+    <script src="lib/angular/angular-route.min.js"></script>
+    <!--Controllers-->
+    <script src="ng/controllers/infoController.js"></script>
+    <script src="ng/controllers/blogController.js"></script>
+    <script src="ng/controllers/socketController.js"></script>
+    <script src="ng/controllers/reactController.js"></script>
+    <!--Directives-->
+    <script src="ng/directives/circle.js"></script>
+    <!-- jQuery -->
+    <script src="lib/jQuery/jquery.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="lib/bootstrap/bootstrap.min.js"></script>
+    <!-- Scroll Glue -->
+    <script src="lib/scrollglue/scrollglue.js"></script>
+    <!-- D3 JavaScript -->
+    <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
 
 </head>
 
 <body id="page-top" class="index">
 
-  <!-- Angular View -->
-  <div class="content" ng-view></div>
+    <!-- Angular View -->
+    <div class="content" ng-view></div>
 </body>
 
 </html>
