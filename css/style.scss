@@ -304,3 +304,27 @@ html,body,.content{
     }
   }
 }
+
+.d3{
+    overflow:hidden;
+    height:100%;
+    .canvas-container{
+         overflow:hidden;
+        background-color:black;
+    }
+}
+
+.babylon {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+    #renderCanvas {
+        width: 100%;
+        height: 100%;
+        -ms-touch-action: none;
+        touch-action: none;
+    }
+}

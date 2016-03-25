@@ -14,6 +14,18 @@ app.config(function($routeProvider) {
   .when('/socket', {
     templateUrl: 'templates/socket.html',
     controller: 'socketController'
-  })
-  .otherwise({ redirectTo: '/info'});
+    })
+   .when('/d3', {
+        templateUrl: 'templates/d3.html',
+        controller: 'd3Controller'
+    })
+    .when('/babylon', {
+        templateUrl: 'templates/babylon.html',
+        controller: 'babylonController'
+    })
+    .when('/angrypig', {
+        templateUrl: 'templates/angrypig.html',
+        controller: 'angrypigController'
+    })
+  .otherwise({ redirectTo: '/angrypig'});
 });
