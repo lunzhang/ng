@@ -23,9 +23,9 @@ app.config(function($routeProvider) {
         templateUrl: 'templates/babylon.html',
         controller: 'babylonController'
     })
-    .when('/angrypig', {
-        templateUrl: 'templates/angrypig.html',
-        controller: 'angrypigController'
+    .when('/flappypig', {
+        templateUrl: 'templates/flappypig.html',
+        controller: 'flappypigController'
     })
-  .otherwise({ redirectTo: '/angrypig'});
+  .otherwise({ redirectTo: '/flappypig'});
 });
