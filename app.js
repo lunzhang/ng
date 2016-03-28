@@ -27,5 +27,10 @@ app.config(function($routeProvider) {
         templateUrl: 'templates/flappypig.html',
         controller: 'flappypigController'
     })
-  .otherwise({ redirectTo: '/flappypig'});
+     .when('/nike', {
+        templateUrl: 'templates/nike.html',
+        controller: 'nikeController'
+    })
+  .otherwise({ redirectTo: '/nike'});
 });
+
