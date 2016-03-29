@@ -6,6 +6,10 @@
     var dataURL = 'http://store.nike.com/html-services/gridwallData?country=US&lang_locale=en_US&gridwallPath=mens-clearance-shoes/47Z7puZoi3&sortOrder=publishdate|desc';
     var counter = 0;
     
+    if (!oldShoes) {
+        oldShoes = [];
+    }
+
     if (oldShoes.length > 0) {
         oldShoes = JSON.parse(oldShoes);
     }
