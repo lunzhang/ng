@@ -264,3 +264,9 @@ html, body, .content {
     height: 100%;
     -ms-touch-action: none;
     touch-action: none; }
+
+.nike a {
+  cursor: default; }
+
+.nike .shoes-container {
+  margin-top: 100px; }
