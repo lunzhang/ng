@@ -33,8 +33,11 @@
                     Current Shoes
                 </div>
               
-                <div  ng-repeat="shoe in currentShoes" class="col-sm-3">
-                    {{shoe.title}}
+                <div  ng-repeat="shoe in currentShoes | orderBy:'newPrice' " class="col-sm-3">
+                    <span>
+                    {{shoe.title}} ${{shoe.newPrice}}/${{shoe.oldPrice}}
+                    </span>
+                  
                 </div>
 
             </div>
@@ -44,8 +47,10 @@
                    Newly Added Shoes
                </div>
                
-               <div ng-repeat="shoe in newShoes" class="col-sm-3">
-                   {{shoe.title}}
+               <div ng-repeat="shoe in newShoes | orderBy:'newPrice'  " class="col-sm-3">
+                   <span>
+                   {{shoe.title}} ${{shoe.newPrice}}/${{shoe.oldPrice}}
+                   </span>
                </div>
 
            </div>

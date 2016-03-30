@@ -9,16 +9,15 @@
     
     if (!oldShoes) {
         oldShoes = [];
+    } else {
+        oldShoes = JSON.parse(oldShoes);
     }
     if (!prevNewShoes) {
         prevNewShoes = [];
-    }
-    if (oldShoes.length > 0) {
-        oldShoes = JSON.parse(oldShoes);
-    }
-    if (prevNewShoes.length > 0) {
+    } else {
         prevNewShoes = JSON.parse(prevNewShoes);
-    }  
+    }
+
     getShoes(dataURL);
 
     function getShoes(url) {
@@ -36,10 +35,11 @@
                     getShoes(dataURL);
                     counter++;
                 }
-                else {              
-                    currentShoes.push({ title: 'KD 8 iD' });                         
+                else {                                     
                     for (var i = 0; i < currentShoes.length; i++) {
                         var currentShoe = currentShoes[i];
+                        currentShoe.newPrice = parseInt(currentShoe.localPrice.replace('$', ''));
+                        currentShoe.oldPrice = parseInt(currentShoe.overriddenLocalPrice.replace('$', ''));  
                         var exist = false;
 
                         for (var j = 0; j < oldShoes.length; j++) {
@@ -52,9 +52,8 @@
                         if (!exist) {
                             newShoes.push(currentShoe);
                         }
-
                     }
-                    
+                                   
                     if (newShoes.length > 0) {
                         $window.localStorage.setItem('prevNewShoes', JSON.stringify(newShoes));
                         $window.localStorage.setItem('oldShoes', JSON.stringify(currentShoes));  
@@ -62,7 +61,7 @@
                     else {
                         newShoes = prevNewShoes;
                     }
-
+ 
                     $scope.oldShoes = oldShoes;
                     $scope.newShoes = newShoes;
                     $scope.currentShoes = currentShoes;
