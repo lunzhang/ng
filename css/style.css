@@ -246,12 +246,52 @@ html, body, .content {
     .socket .chat-wrapper {
       height: 300px; } }
 
-.d3 {
-  overflow: hidden;
-  height: 100%; }
-  .d3 .canvas-container {
-    overflow: hidden;
-    background-color: black; }
+.d3 body {
+  background: #fcfcfa; }
+
+.d3 .fill {
+  fill: #3987c9; }
+
+.d3 .graticule {
+  fill: none;
+  stroke: #777;
+  stroke-width: .5px;
+  stroke-opacity: .5; }
+
+.d3 .land {
+  fill: #222; }
+
+.d3 .boundary {
+  fill: none;
+  stroke: #fff;
+  stroke-width: .5px; }
+
+.d3 #tooltip {
+  display: none;
+  position: absolute;
+  text-align: center;
+  width: 150px;
+  height: 75px;
+  line-height: 90px;
+  font: 12px sans-serif;
+  background: lightsteelblue;
+  border: 0;
+  border-radius: 8px;
+  pointer-events: none; }
+  .d3 #tooltip p {
+    position: relative;
+    top: 50%;
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%); }
+
+.d3 #timeline {
+  overflow: auto; }
+
+.d3 #globe {
+  padding: 50px; }
 
 .babylon {
   overflow: hidden;
