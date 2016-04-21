@@ -1,4 +1,4 @@
-app.directive('circle', function () {
+app.directive('bubble', function () {
   return {
     restrict:'E',
     link:function (scope, element, attribute) {

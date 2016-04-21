@@ -31,6 +31,6 @@ app.config(function($routeProvider) {
         templateUrl: 'templates/nike.html',
         controller: 'nikeController'
     })
-  .otherwise({ redirectTo: '/d3'});
+  .otherwise({ redirectTo: '/info'});
 });
 
