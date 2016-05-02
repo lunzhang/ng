@@ -134,13 +134,26 @@ app.controller('infoController', function ($scope, $interval, $document) {
  
     //globe
     (function () {
-        var width = 360,
-            height = 360;
-        var projection = d3.geo.orthographic()
+        //global variables
+        var winWidth = $(window).width();
+        if (winWidth < 400) {
+            var width = 180,
+                height = 180;
+            var projection = d3.geo.orthographic()
+            .scale(90)
+            .translate([width / 2, height / 2])
+            .clipAngle(90)
+            .precision(.1);
+        } else {
+            var width = 360,
+                height = 360;
+            var projection = d3.geo.orthographic()
             .scale(180)
             .translate([width / 2, height / 2])
             .clipAngle(90)
             .precision(.1);
+        }
+      
         var path = d3.geo.path()
             .projection(projection);
         var graticule = d3.geo.graticule();
