@@ -227,6 +227,8 @@ app.controller('infoController', function ($scope, $interval, $document) {
             .style('fill', '#E43131')
             .style('display', 'none');
             
+            var tip;
+            var tooltip = d3.select('#tooltip');
             this.zoomIn = function (i, location) {
                 var bounds = path.bounds(countries[i]),
                     dx = bounds[1][0] - bounds[0][0],
@@ -241,7 +243,15 @@ app.controller('infoController', function ($scope, $interval, $document) {
                     g.attr("zoom", true);
                     currentCountry = countries[i].name;
                     inProgress = false;
-                    g.select('#' + location).style('display', 'inline');
+                    var circle = '#' + location;
+                    g.select(circle).style('display', 'inline');
+
+                    var posX = $(circle).offset().left-100;
+                    var posY = $(circle).offset().top - 100;
+                    tooltip.style("left", (posX) + "px")
+                               .style("top", (posY) + "px")
+                                .style("display", 'block');
+
                 });
             };
             
@@ -268,10 +278,13 @@ app.controller('infoController', function ($scope, $interval, $document) {
                     zoomIn(i, location);
                 });
             }
-            
-            this.zoomOut = function (i, location) {
+           
+            this.zoomOut = function (i, location, datatip) {
+                $scope.tip = datatip;
+                $scope.$apply();
                 if (!inProgress) {
                     if (g.attr("zoom") === "true" && currentCountry != countries[i].name) {
+                        tooltip.style("display", 'none');
                         inProgress = true;
                         g.transition()
                             .duration(750)
@@ -298,7 +311,7 @@ app.controller('infoController', function ($scope, $interval, $document) {
     
     //timeline
     (function () {
-        var testData = [
+        var data = [
             {
                 times: [
                     { "starting_time": 757287682200, "display" : "circle", "id": "born", "index": 31, "location": "wz", "tip" : "Born in Wz,CN on 11/30/1993" }]
@@ -341,21 +354,13 @@ app.controller('infoController', function ($scope, $interval, $document) {
                 .beginning(757287682200)
                 .ending(1458679282200)
                 .mouseover(function (d, i, datum) {
-            var date = '#' + d.id;
-            var posX = $(date).offset().left - 70;
-            var posY = $(date).offset().top - 80;
-            $scope.tip = d.tip;
-            $scope.$apply();
-            tooltip.style("left", (posX) + "px")
-                               .style("top", (posY) + "px")
-                                .style("display", 'block');
-            zoomOut(d.index, d.location);
+            zoomOut(d.index, d.location,d.tip);
         })
                 .mouseout(function (d, i, datum) {
-            tooltip.style("display", 'none');
+          
         });
         var timeline = d3.select("#timeline").append("svg").attr("width", '1000')
-                .datum(testData).call(chart);
+                .datum(data).call(chart);
     })();
 
 });
