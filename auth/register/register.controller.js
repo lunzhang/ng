@@ -1,4 +1,4 @@
-﻿app.controller('registerController', function ($scope,$location,authentication) {
+﻿app.controller('registerController', function ($scope,$state,authentication) {
  
     $scope.credentials = {
         email : "",
@@ -12,7 +12,6 @@
             alert(err);
         })
         .then(function (data) {
-            console.log(data);
             $state.go('profile');
         });
     };
