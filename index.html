@@ -18,9 +18,9 @@
     <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
     <!-- Angular -->
     <script src="lib/angular/angular.min.js"></script>
+    <script src="lib/ui-router/angular-ui-router.min.js"></script>
     <!-- Angular router -->
     <script src="app.js"></script>
-    <script src="lib/angular/angular-route.min.js"></script>
     <!-- Controllers -->
     <script src="controllers/infoController.js"></script>
     <script src="controllers/blogController.js"></script>
@@ -29,8 +29,14 @@
     <script src="controllers/babylonController.js"></script>
     <script src="controllers/flappypigController.js"></script>
     <script src="controllers/nikeController.js"></script>
+    <script src="auth/register/register.controller.js"></script>
+    <script src="auth/profile/profile.controller.js"></script>
+    <script src="auth/login/login.controller.js"></script>
+    <script src="auth/service/authentication.service.js"></script>
+    <script src="auth/service/user.service.js"></script>
     <!-- Directives -->
     <script src="directives/bubble.js"></script>
+    <script src="routes.js"></script>
     <!-- jQuery -->
     <script src="lib/jQuery/jquery.js"></script>
     <!-- Bootstrap Core JavaScript -->
@@ -53,7 +59,7 @@
 <body id="page-top" class="index">
 
     <!-- Angular View -->
-    <div class="content" ng-view></div>
+    <div class="content" ui-view></div>
 </body>
 
 </html>
