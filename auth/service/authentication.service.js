@@ -1,4 +1,4 @@
-﻿app.service('authentication', function ($http,$window,user) {
+﻿app.service('authentication', ['$http','$window','user',function ($http,$window,user) {
     
     this.saveToken = function (token) {
         user.token=token;
@@ -61,4 +61,4 @@
         });
     };
     
-});
+}]);

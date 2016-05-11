@@ -1,4 +1,4 @@
-﻿app.controller('loginController', function ($scope,$state,authentication) { 
+﻿app.controller('loginController', ['$scope','$state','authentication',function ($scope,$state,authentication) { 
 
     $scope.credentials = {
         email : "",
@@ -16,4 +16,4 @@
         });
     };
 
-});
+}]);

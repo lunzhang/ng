@@ -1,5 +1,5 @@
 app.controller('socketController', function($scope,$timeout) {
-  var socket = io.connect('http://live-lunny93.rhcloud.com:8000/');
+  var socket = io.connect('www.live-lunny93.rhcloud.com:8000');
   var textarea = $('#input-box');
   var messageBox = $('#message-box');
   $scope.messages=[];

@@ -1,4 +1,4 @@
-﻿app.controller('profileController', function ($scope,authentication) { 
+﻿app.controller('profileController', ['$scope','authentication',function ($scope,authentication) { 
 
     authentication.getProfile()
     .success(function (data) {
@@ -7,4 +7,4 @@
       .error(function (e) {
         console.log(e);
     });
-});
+}]);
