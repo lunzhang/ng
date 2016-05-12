@@ -5,6 +5,6 @@
         $scope.user = data;
     })
       .error(function (e) {
-        console.log(e);
+         console.log(err);
     });
 }]);

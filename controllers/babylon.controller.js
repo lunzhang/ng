@@ -1,4 +1,4 @@
-﻿app.controller('babylonController', function ($scope) {
+﻿app.controller('babylonController',['$scope',function ($scope) {
 
     var canvas = document.getElementById('renderCanvas');
     var engine = new BABYLON.Engine(canvas, true);
@@ -25,4 +25,4 @@
         engine.resize();
     });
 
-});
+}]);

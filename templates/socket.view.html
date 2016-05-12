@@ -1,0 +1,24 @@
+<div class="socket">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-8">
+            </div>
+            <div class="col-sm-4 chat-wrapper">
+                <div class="chat-box">
+                    <div id="message-box" scroll-glue>
+                        <div class="container-fluid">
+                            <div ng-repeat="message in messages track by $index">
+                                <div class="row" style="border-bottom:1px solid grey;padding:5px 0;">
+                                    <div class="col-xs-12" title="{{message.date}}" style="min-height:22px;">
+                                        {{message.message}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <textarea id="input-box" maxlength="30"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

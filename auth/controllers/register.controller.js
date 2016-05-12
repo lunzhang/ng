@@ -1,5 +1,5 @@
-﻿app.controller('loginController', ['$scope','$state','authentication',function ($scope,$state,authentication) { 
-
+﻿app.controller('registerController',['$scope','$state','authentication',function ($scope,$state,authentication) {
+ 
     $scope.credentials = {
         email : "",
         password : ""
@@ -7,13 +7,14 @@
     
     $scope.onSubmit = function () {
         authentication
-        .login($scope.credentials)
+        .register($scope.credentials)
         .error(function (err) {
-            alert(err);
+                console.log(err);
         })
-        .then(function () {
+        .then(function (data) {
             $state.go('profile');
         });
     };
+
 
 }]);

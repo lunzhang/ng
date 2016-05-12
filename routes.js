@@ -4,56 +4,55 @@
     $stateProvider
   .state('info', {
         url: '/info',
-        templateUrl: 'templates/info.html',
+        templateUrl: 'templates/info.view.html',
         controller: 'infoController'
     })
   .state('blog', {
         url: '/blog',
-        templateUrl: 'templates/blog.html',
+        templateUrl: 'templates/blog.view.html',
         controller: 'blogController'
     })
   .state('socket', {
         url: '/socket',
-        templateUrl: 'templates/socket.html',
+        templateUrl: 'templates/socket.view.html',
         controller: 'socketController'
     })
    .state('d3', {
         url: '/d3',
-        templateUrl: 'templates/d3.html',
+        templateUrl: 'templates/d3.view.html',
         controller: 'd3Controller'
     })
     .state('babylon', {
         url: '/babylon',
-        templateUrl: 'templates/babylon.html',
+        templateUrl: 'templates/babylon.view.html',
         controller: 'babylonController'
     })
     .state('flappypig', {
         url: '/flappypig',
-        templateUrl: 'templates/flappypig.html',
+        templateUrl: 'templates/flappypig.view.html',
         controller: 'flappypigController'
     })
      .state('nike', {
         url: '/nike',
-        templateUrl: 'templates/nike.html',
+        templateUrl: 'templates/nike.view.html',
         controller: 'nikeController'
     })
     .state('login', {
         url: '/login',
-        templateUrl: 'auth/login/login.view.html',
+        templateUrl: 'auth/templates/login.view.html',
         controller: 'loginController'
     })
     .state('register', {
         url: '/register',
-        templateUrl: 'auth/register/register.view.html',
+        templateUrl: 'auth/templates/register.view.html',
         controller: 'registerController'
     })
     .state('profile', {
         url: '/profile',
-        templateUrl: 'auth/profile/profile.view.html',
+        templateUrl: 'auth/templates/profile.view.html',
         controller: 'profileController',
         resolve: { authenticate: authenticate }
     });
-    
     
     function authenticate($q, authentication, $state,$timeout) {
         if (authentication.isLoggedIn()) {

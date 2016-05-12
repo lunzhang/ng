@@ -1,4 +1,4 @@
-app.controller('infoController', function ($scope, $interval, $document) {
+app.controller('infoController',['$scope','$interval', function ($scope, $interval) {
     
     //bubble
     (function () {      
@@ -363,4 +363,4 @@ app.controller('infoController', function ($scope, $interval, $document) {
                 .datum(data).call(chart);
     })();
 
-});
+}]);

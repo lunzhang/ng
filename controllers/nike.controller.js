@@ -1,4 +1,4 @@
-﻿app.controller('nikeController', function ($scope, $window, $http) {
+﻿app.controller('nikeController',['$scope','$window','$http',function ($scope, $window, $http) {
     
     var oldShoes = $window.localStorage.getItem('oldShoes');
     var prevNewShoes = $window.localStorage.getItem('prevNewShoes');
@@ -87,9 +87,4 @@
 
     }
 
-
-
-
-
-
-});
+}]);

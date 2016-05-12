@@ -1,4 +1,4 @@
-﻿app.controller('d3Controller', function ($scope) {
+﻿app.controller('d3Controller',[ '$scope',function ($scope) {
     
     //globe
     (function () {
@@ -216,4 +216,4 @@
         timeline.selectAll('text').attr('font-size',15);
     })();
 
-});
+}]);
