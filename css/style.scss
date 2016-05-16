@@ -367,62 +367,28 @@ html,body,.content{
 }
 
 .d3 {
-
-    body {
-        background: #fcfcfa;
-    }
-
-    .fill {
-        fill: #3987c9;
-    }
-
-    .graticule {
-        fill: none;
-        stroke: #777;
-        stroke-width: .5px;
-        stroke-opacity: .5;
-    }
-
-    .land {
-        fill: #222;
-    }
-
-    .boundary {
-        fill: none;
-        stroke: #fff;
-        stroke-width: .5px;
-    }
-
-    #tooltip {
-        display: none;
-        position: absolute;
-        text-align: center;
-        width: 150px;
-        height: 75px;
-        line-height: 90px;
-        font: 12px sans-serif;
-        background: lightsteelblue;
-        border: 0;
-        border-radius: 8px;
-        pointer-events: none;
-
-        p {
-            position: relative;
-            top: 50%;
-            -moz-transform: translateY(-50%);
-            -ms-transform: translateY(-50%);
-            -o-transform: translateY(-50%);
-            -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
+    #rates{
+        .btn{
+            border-radius: 0;
+            width:100px;
+            margin-top:20px;
         }
     }
-
-    #timeline {
-        overflow: auto;
+    #chart{
+        padding-top:50px;
     }
-
-    #globe {
-        padding: 50px;
+    svg {
+        overflow: visible;
+    }
+    .axis path, .axis line {
+        fill: none;
+        stroke: #000;
+        shape-rendering: crispEdges;
+    }
+    .line {
+        fill: none;
+        stroke: steelblue;
+        stroke-width: 1.5px;
     }
 }
 
