@@ -1,7 +1,17 @@
 <div class="socket">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-sm-6">
+            <div class="col-sm-3">
+                <input  class="form-control" ng-model="roomId" placeholder="Enter Room Id">
+                <button type="button" class="btn btn-primary" ng-click="joinRoom()">
+                   Join Room
+                </button>
+                <button type="button" class="btn btn-primary" ng-click="createRoom()">
+                    Create Room 
+                </button>
+            </div>
+            <div class="col-sm-3">
+               {{roomId}}
             </div>
             <div class="col-sm-6 chat-wrapper">
                 <div class="chat-box">

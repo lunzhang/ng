@@ -264,10 +264,12 @@ html, body, .content {
     .socket .chat-wrapper {
       height: 300px; } }
 
-.d3 #rates .btn {
-  border-radius: 0;
-  width: 100px;
-  margin-top: 20px; }
+.d3 #rates {
+  z-index: 1; }
+  .d3 #rates .btn {
+    border-radius: 0;
+    width: 100px;
+    margin-top: 20px; }
 
 .d3 #chart {
   padding-top: 50px; }
