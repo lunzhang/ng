@@ -304,3 +304,63 @@ html, body, .content {
 
 .nike .shoes-container {
   margin-top: 100px; }
+
+.login {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%); }
+
+.game {
+  height: 100%; }
+  .game .container-fluid {
+    height: 100%; }
+    .game .container-fluid .row {
+      height: 100%; }
+      .game .container-fluid .row .col-sm-9 {
+        height: 100%; }
+  .game .chat-wrapper {
+    position: relative;
+    height: 100%; }
+  .game .chat-box {
+    border: 1px solid #848282;
+    background-color: #e5e5e5;
+    padding: 10px 0;
+    top: 25%;
+    left: 0;
+    right: 5%;
+    bottom: 0;
+    height: 70%;
+    position: absolute; }
+  .game #message-box {
+    position: absolute;
+    width: auto !important;
+    height: auto !important;
+    top: 15px;
+    bottom: 115px;
+    left: 0;
+    right: 0;
+    overflow-y: scroll; }
+  .game #message-box::-webkit-scrollbar {
+    width: 10px; }
+  .game #message-box::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: grey; }
+  .game #input-box {
+    resize: none;
+    height: 75px;
+    margin: 20px 0px 0px 0px;
+    padding: 0;
+    bottom: 5%;
+    width: 90%;
+    position: absolute;
+    box-sizing: border-box;
+    left: 5%; }
+  @media (max-width: 760px) {
+    .game .chat-box {
+      right: 0; }
+    .game .chat-wrapper {
+      height: 300px; } }

@@ -1,8 +1,8 @@
 ﻿app.config(function ($stateProvider, $urlRouterProvider) {
-    $urlRouterProvider.otherwise('/info');
+    $urlRouterProvider.otherwise('/socket');
     
     $stateProvider
-  .state('info', {
+    .state('info', {
         url: '/info',
         templateUrl: 'templates/info.view.html',
         controller: 'infoController'
@@ -52,8 +52,36 @@
         templateUrl: 'auth/templates/profile.view.html',
         controller: 'profileController',
         resolve: { authenticate: authenticate }
+    })
+    .state('spyboxmenu', {
+        url:'/spybox/menu',
+        templateUrl: 'spybox/template/menu.view.html',
+        controller: 'spyboxMenuController',
+        resolve: {authenticate:spyboxAuthenticate}
+    })
+    .state('spyboxgame', {
+        url: '/spybox/game',
+        templateUrl: 'spybox/template/game.view.html',
+        controller: 'spyboxGameController',
+        resolve: { authenticate: spyboxAuthenticate }
+    })
+    .state('spyboxlogin', {
+        url: '/spybox/login',
+        templateUrl: 'spybox/template/login.view.html',
+        controller: 'spyboxLoginController'
     });
     
+    function spyboxAuthenticate($q, spy, $state, $timeout){
+        if (spy.isLoggedIn()) {
+            return $q.when();
+        } else {
+            $timeout(function () {
+                $state.go('spyboxlogin')
+            })
+            return $q.reject();
+        }
+    }
+
     function authenticate($q, authentication, $state,$timeout) {
         if (authentication.isLoggedIn()) {
             return $q.when()

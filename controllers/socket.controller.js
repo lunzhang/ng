@@ -17,27 +17,5 @@ app.controller('socketController', ['$scope', '$timeout', '$http', function ($sc
             $scope.messages.push(msg);
             $scope.$apply();
         });
-        
-        socket.on('roomId', function (roomId) {
-            $scope.roomId = roomId;
-            $scope.$apply();
-        });
-        
-        socket.on('disconnect', function () { 
-            socket.emit('leave', $scope.roomId);
-        });
-        
-        socket.on('roommates', function (roommates) {
-            $scope.roommates = roommates;
-            console.log(roommates);
-        });
-
-        $scope.createRoom = function (){
-            socket.emit('create');
-        }
-
-        $scope.joinRoom = function (){
-            socket.emit('join', $scope.roomId);
-        }
 
     }]);

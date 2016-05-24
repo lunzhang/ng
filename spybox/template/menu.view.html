@@ -1,0 +1,30 @@
+﻿<div class="menu">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12 text-center">
+                Welcome Spy {{username}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-2 col-sm-push-3">
+                <input class="form-control " ng-model="roomId" placeholder="Enter Room">
+            </div>
+            <div class="col-sm-2 col-sm-push-3">
+                <button type="button" class="btn btn-primary btn-block" ng-click="joinRoom()">
+                    Join Room
+                </button>
+            </div>
+            <div class="col-sm-2 col-sm-push-3">
+                <button type="button" class="btn btn-primary btn-block" ng-click="createRoom()">
+                    Create Room
+                </button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 text-center">
+               {{event}}
+            </div>
+        </div>
+    </div>
+</div>
+

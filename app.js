@@ -1,2 +1,2 @@
-var app = angular.module('app', ['ui.router','luegg.directives']);
+var app = angular.module('app', ['ui.router','luegg.directives','ngStorage']);
 
