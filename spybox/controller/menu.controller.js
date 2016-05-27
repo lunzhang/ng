@@ -9,9 +9,11 @@
         }
         
         $scope.joinRoom = function () {
-            socket.emit('join', {
-                roomId: $scope.roomId
-            });
+            if ($scope.roomId) {
+                socket.emit('join', {
+                    roomId: $scope.roomId
+                });
+            }
         }
         
         socket.on('roomId', function (data) {
@@ -27,6 +29,7 @@
         });
 
         function goInBox(){
+            $scope.event = "";
             socket.removeListener('roomId');
             socket.removeListener('room');
             $state.go('spyboxgame');
