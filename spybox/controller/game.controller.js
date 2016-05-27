@@ -27,7 +27,7 @@
         });
         
         socket.on('start', function (data) {
-            $scope.timeLeft = 5;
+            $scope.timeLeft = 15;
             $scope.rotation = 0;
             $scope.gameStart = true;
             $scope.wordsBox = data.wordsBox;
@@ -59,7 +59,7 @@
                             forced: false
                         });
                     } else {
-                        $scope.timeLeft = 5;
+                        $scope.timeLeft = 15;
                     }
                 }
            
