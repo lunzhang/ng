@@ -1,5 +1,5 @@
 ﻿app.config(function ($stateProvider, $urlRouterProvider) {
-    $urlRouterProvider.otherwise('/socket');
+    $urlRouterProvider.otherwise('/info');
     
     $stateProvider
     .state('info', {
