@@ -264,28 +264,63 @@ html, body, .content {
     .socket .chat-wrapper {
       height: 300px; } }
 
-.d3 #rates {
-  z-index: 1; }
-  .d3 #rates .btn {
-    border-radius: 0;
-    width: 100px;
-    margin-top: 20px; }
+.d3 .main-content {
+  background-color: black; }
 
-.d3 #chart {
-  padding-top: 50px; }
+.d3 .fill {
+  fill: #3987c9; }
 
-.d3 svg {
-  overflow: visible; }
-
-.d3 .axis path, .d3 .axis line {
+.d3 .graticule {
   fill: none;
-  stroke: #000;
-  shape-rendering: crispEdges; }
+  stroke: #777;
+  stroke-width: .5px;
+  stroke-opacity: .5; }
 
-.d3 .line {
+.d3 .land {
+  fill: #222; }
+
+.d3 .boundary {
   fill: none;
-  stroke: steelblue;
-  stroke-width: 1.5px; }
+  stroke: #fff;
+  stroke-width: .5px; }
+
+.d3 #tooltip {
+  display: none;
+  position: absolute;
+  text-align: center;
+  width: 150px;
+  height: 75px;
+  line-height: 90px;
+  font: 12px sans-serif;
+  background: lightsteelblue;
+  border: 0;
+  border-radius: 8px;
+  pointer-events: none; }
+  .d3 #tooltip p {
+    position: relative;
+    top: 50%;
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%); }
+
+.d3 #timeline {
+  overflow: auto; }
+  .d3 #timeline circle {
+    r: 7px; }
+  .d3 #timeline text {
+    font-size: 15px;
+    fill: white; }
+  .d3 #timeline path.domain {
+    stroke: white; }
+
+.d3 #globe g circle {
+  r: 2px; }
+
+.d3 .links {
+  padding-top: 25px;
+  padding-bottom: 25px; }
 
 .babylon {
   overflow: hidden;

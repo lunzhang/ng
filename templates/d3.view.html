@@ -1,79 +1,19 @@
 ﻿<div class="d3">
+  <!-- main content -->
+  <div class="main-content text-center">
+      <div class="container">
+          <div class="row">
+              <div class="col-sm-12">
+                  <div id="globe"></div>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-sm-12">
+                  <div id="timeline"></div>
+              </div>
+          </div>
+      </div>
+  </div>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <div id="nyc">
-
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-md-2 col-md-push-10">
-                <div id="rates" class="btn-group" data-toggle="buttons">
-                    <label class="btn btn-primary active">
-                        <input type="checkbox" value="bidOpen" > Bid Open
-                    </label>
-                    <label class="btn btn-primary">
-                        <input type="checkbox" value="bidClose"> Bid Close
-                    </label>
-                    <label class="btn btn-primary">
-                        <input type="checkbox" value="bidHigh"> Bid High
-                    </label>
-                    <label class="btn btn-primary">
-                        <input type="checkbox" value="bidLow"> Bid Low
-                    </label>
-                    <label class="btn btn-primary ">
-                        <input type="checkbox" value="askOpen">Ask Open
-                    </label>
-                    <label class="btn btn-primary">
-                        <input type="checkbox" value="askClose"> Ask Close
-                    </label>
-                    <label class="btn btn-primary">
-                        <input type="checkbox" value="askHigh"> Ask High
-                    </label>
-                    <label class="btn btn-primary">
-                        <input type="checkbox" value="askLow"> Ask Low
-                    </label>
-                </div>
-            </div>
-            <div class="col-md-10 col-md-pull-2">
-                <div id="chart">
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12 text-center">
-                <div id="period" class="btn-group" data-toggle="buttons">
-                    <label class="btn btn-primary">
-                        <input type="radio" value="m1">m1
-                    </label>
-                    <label class="btn btn-primary">
-                        <input type="radio" value="m5">m5
-                    </label>
-                    <label class="btn btn-primary">
-                        <input type="radio" value="m15">m15
-                    </label>
-                    <label class="btn btn-primary">
-                        <input type="radio" value="m30">m30
-                    </label>
-                    <label class="btn btn-primary">
-                        <input type="radio" value="H1">H1
-                    </label>
-                    <label class="btn btn-primary">
-                        <input type="radio" value="D1">D1
-                    </label>
-                    <label class="btn btn-primary">
-                        <input type="radio" value="W1">W1
-                    </label>
-                    <label class="btn btn-primary active">
-                        <input type="radio" value="M1">M1
-                    </label>
-                </div>
-            </div>
-        </div>
-    </div>
+  <div id="tooltip"><p>{{tip}}</p></div>
 </div>
