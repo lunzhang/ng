@@ -1,16 +1,16 @@
 ﻿app.config(function ($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/info');
-    
+
     $stateProvider
     .state('info', {
         url: '/info',
         templateUrl: 'templates/info.view.html',
         controller: 'infoController'
     })
-  .state('blog', {
-        url: '/blog',
-        templateUrl: 'templates/blog.view.html',
-        controller: 'blogController'
+  .state('googlemap', {
+        url: '/googlemap',
+        templateUrl: 'templates/googlemap.view.html',
+        controller: 'googlemapController'
     })
   .state('socket', {
         url: '/socket',
@@ -70,7 +70,7 @@
         templateUrl: 'spybox/template/login.view.html',
         controller: 'spyboxLoginController'
     });
-    
+
     function spyboxAuthenticate($q, spy, $state, $timeout){
         if (spy.isLoggedIn()) {
             return $q.when();
@@ -93,4 +93,3 @@
         }
     }
 });
-

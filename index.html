@@ -1,62 +1,64 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html ng-app="app"   lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <title>Lun Zhang</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <title>Lun Zhang</title>
 
-    <!-- Bootstrap Themes -->
-    <link href="lib/bootstrap/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link href="css/style.min.css" rel="stylesheet">
-    <!-- Custom Fonts -->
-    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Nunito:300' rel='stylesheet' type='text/css'>
-    <!-- Babylon -->
-    <script src="http://cdn.babylonjs.com/2-3/babylon.max.js"></script>
-    <!-- Socket io -->
-    <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
-    <!-- Angular -->
-    <script src="lib/angular/angular.min.js"></script>
-    <script src="lib/ui-router/angular-ui-router.min.js"></script>
-    <!-- Angular router -->
-    <script src="app.js"></script>
-    <!-- Controllers -->
-    <script src="controllers.min.js"></script>
-    <!-- Directives -->
-    <script src="directives/bubble.js"></script>
-    <script src="routes.js"></script>
-    <!-- jQuery -->
-    <script src="lib/jQuery/jquery.js"></script>
-    <!-- Bootstrap Core JavaScript -->
-    <script src="lib/bootstrap/bootstrap.min.js"></script>
-    <!-- Scroll Glue -->
-    <script src="lib/scrollglue/scrollglue.js"></script>
-    <!-- ngStorage -->
-    <script src="lib/ngStorage/ngStorage.min.js"></script>
-    <!-- D3 JavaScript -->
-    <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
-    <script src="//d3js.org/topojson.v1.min.js"></script>
-    <script src="lib/d3/d3-timeline.js"></script>
-    <script src="//d3js.org/queue.v1.min.js"></script>
-    <!-- phaser -->
-    <script src="lib/phaser/phaser.min.js"></script>
-    <!-- angry pig -->
-    <script src="lib/flappypig/flappypig.js"></script>
-    <!-- spy box -->
-    <script src="spybox/controller/game.controller.js"></script>
-    <script src="spybox/controller/menu.controller.js"></script>
-    <script src="spybox/controller/login.controller.js"></script>
-    <script src="spybox/service/spy.service.js"></script>
-    <!-- google map -->
-    <script src="http://maps.googleapis.com/maps/api/js"></script>
+  <!-- Bootstrap Themes -->
+  <link href="lib/bootstrap/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link href="css/style.min.css" rel="stylesheet">
+  <!-- Custom Fonts -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Nunito:300' rel='stylesheet' type='text/css'>
+  <!-- Babylon -->
+  <script src="http://cdn.babylonjs.com/2-3/babylon.max.js"></script>
+  <!-- Socket io -->
+  <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+  <!-- Angular -->
+  <script src="lib/angular/angular.min.js"></script>
+  <script src="lib/ui-router/angular-ui-router.min.js"></script>
+  <script src="lib/angular/angular-sanitize.js"></script>
+  <!-- Angular router -->
+  <script src="app.js"></script>
+  <!-- Controllers -->
+  <script src="controllers.min.js"></script>
+  <!-- Directives -->
+  <script src="directives/bubble.directive.js"></script>
+  <script src="directives/navbar.directive.js"></script>
+  <script src="routes.js"></script>
+  <!-- jQuery -->
+  <script src="lib/jQuery/jquery.js"></script>
+  <!-- Bootstrap Core JavaScript -->
+  <script src="lib/bootstrap/bootstrap.min.js"></script>
+  <!-- Scroll Glue -->
+  <script src="lib/scrollglue/scrollglue.js"></script>
+  <!-- ngStorage -->
+  <script src="lib/ngStorage/ngStorage.min.js"></script>
+  <!-- D3 JavaScript -->
+  <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
+  <script src="//d3js.org/topojson.v1.min.js"></script>
+  <script src="lib/d3/d3-timeline.js"></script>
+  <script src="//d3js.org/queue.v1.min.js"></script>
+  <!-- phaser -->
+  <script src="lib/phaser/phaser.min.js"></script>
+  <!-- angry pig -->
+  <script src="lib/flappypig/flappypig.js"></script>
+  <!-- spy box -->
+  <script src="spybox/controller/game.controller.js"></script>
+  <script src="spybox/controller/menu.controller.js"></script>
+  <script src="spybox/controller/login.controller.js"></script>
+  <script src="spybox/service/spy.service.js"></script>
+  <!-- google map -->
+  <script src="https://maps.google.com/maps/api/js?key=AIzaSyCY_foanRzzUBZbMdPrxnT0mcyMrufnoew"></script>
 
 </head>
 
 <body>
 
-    <!-- Angular View -->
-    <div class="content" ui-view></div>
+  <!-- Angular View -->
+  <div class="content" ui-view></div>
 </body>
 
 </html>

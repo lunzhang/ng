@@ -1,2 +1,1 @@
-var app = angular.module('app', ['ui.router','luegg.directives','ngStorage']);
-
+var app = angular.module('app', ['ui.router','luegg.directives','ngStorage','ngSanitize']);

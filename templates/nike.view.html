@@ -1,60 +1,39 @@
-﻿<div class="nike" ng-cloak >
+<div class="nike" ng-cloak >
 
+  <navbar></navbar>
 
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container-fluid">
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="page-scroll"  >
-                        <a ng-click="toggleShoes()" ng-if="showCurrent">New</a>
-                    </li>
-                    <li class="page-scroll" >
-                        <a ng-click="toggleShoes()" ng-if="showNew">Current</a>
-                    </li>
-                </ul>
-            </div>
+  <div class="row text-right">
+    <span class="btn btn-primary" ng-if="showCurrent" ng-click="toggleShoes()">
+      New
+    </span>
+    <span class="btn btn-primary" ng-if="showNew" ng-click="toggleShoes()">
+      Current
+    </span>
+  </div>
+
+  <div class="container-fluid shoes-container">
+    <div class="row">
+      <div ng-show="showCurrent">
+        <div class="col-sm-12 text-center">
+          Current Shoes
         </div>
-    </nav>
-
-
-    <div class="container-fluid shoes-container">
-        <div class="row">
-            <div ng-show="showCurrent">
-
-                <div class="col-sm-12 text-center">
-                    Current Shoes
-                </div>
-              
-                <div  ng-repeat="shoe in currentShoes | orderBy:'newPrice' " class="col-sm-3">
-                    <span>
-                    {{shoe.title}} ${{shoe.newPrice}}/${{shoe.oldPrice}}
-                    </span>
-                  
-                </div>
-
-            </div>
-           <div ng-show="showNew">
-
-               <div class="col-sm-12 text-center">
-                   Newly Added Shoes
-               </div>
-               
-               <div ng-repeat="shoe in newShoes | orderBy:'newPrice'  " class="col-sm-3">
-                   <span>
-                   {{shoe.title}} ${{shoe.newPrice}}/${{shoe.oldPrice}}
-                   </span>
-               </div>
-
-           </div>
-
+        <div  ng-repeat="shoe in currentShoes | orderBy:'newPrice'" class="col-sm-3">
+          <span>
+            {{shoe.title}} ${{shoe.newPrice}}/${{shoe.oldPrice}}
+          </span>
         </div>
+      </div>
+      <div ng-show="showNew">
+        <div class="col-sm-12 text-center">
+          Newly Added Shoes
+        </div>
+        <div ng-repeat="shoe in newShoes | orderBy:'newPrice'" class="col-sm-3">
+          <span>
+            {{shoe.title}} ${{shoe.newPrice}}/${{shoe.oldPrice}}
+          </span>
+        </div>
+      </div>
     </div>
+  </div>
+
 </div>
