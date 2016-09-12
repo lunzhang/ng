@@ -26,6 +26,9 @@ app.directive('navbar', function () {
                     '<li >'+
                       '<a href="#/spybox/login">SpyBox</a>'+
                     '</li>'+
+                    '<li >'+
+                      '<a href="#/googlemap">GoogleMap</a>'+
+                    '</li>'+
                     '<li>'+
                       '<a href="Lun.Zhang.Resume.pdf">Resume</a>'+
                     '</li>'+

@@ -1,53 +1,53 @@
 navbar + div {
-  padding-top: 75px; }
+  padding-top: 65px; }
 
 html, body, .content {
   height: 100%; }
 
-.info {
+#info {
   height: 100%;
   background-color: black;
   /*small view*/ }
-  .info .bubble {
+  #info .bubble {
     opacity: .7;
     display: block;
     position: absolute;
     background-color: white;
     z-index: 10; }
-  .info .fa.fa-fw {
+  #info .fa.fa-fw {
     font-size: 30px; }
-  .info .fa.fa-fw.fa-github {
+  #info .fa.fa-fw.fa-github {
     border-radius: 150%;
     border-color: red;
     color: #FF33FF; }
-  .info .fa.fa-fw.fa-github:hover {
+  #info .fa.fa-fw.fa-github:hover {
     color: purple; }
-  .info h1, .info h2, .info h3, .info h4, .info h5, .info h6 {
+  #info h1, #info h2, #info h3, #info h4, #info h5, #info h6 {
     font-family: 'Nunito', sans-serif; }
-  .info h1 {
+  #info h1 {
     border-bottom: 2.2px #4582ec solid;
     color: #A56262; }
-  .info h2 {
+  #info h2 {
     color: #E3ECFF; }
-  .info h3 {
+  #info h3 {
     font-size: 1.5em;
     color: #E3ECFF; }
-  .info img.center {
+  #info img.center {
     display: block;
     margin-left: auto;
     margin-right: auto; }
-  .info .img-circular {
+  #info .img-circular {
     opacity: .6;
     border-radius: 50%;
     width: 220px;
     height: 220px;
     background: url(../img/profile.jpg) no-repeat;
     background-position: 50% 0%; }
-  .info .img-circular:hover {
+  #info .img-circular:hover {
     opacity: 1; }
-  .info .main-content {
+  #info .main-content {
     background-color: black; }
-  .info .vertical-middle {
+  #info .vertical-middle {
     position: relative;
     top: 50%;
     left: 50%;
@@ -57,16 +57,16 @@ html, body, .content {
     -webkit-transform: translateX(-50%) translateY(50%);
     transform: translateX(-50%) translateY(50%); }
   @media (max-width: 760px) {
-    .info h1 {
+    #info h1 {
       font-size: 2em; }
-    .info .img-circular {
+    #info .img-circular {
       width: 160px;
       height: 160px; }
-    .info h3 {
+    #info h3 {
       font-size: 1em; }
-    .info #globe {
+    #info #globe {
       padding-top: 15px; }
-    .info .vertical-middle {
+    #info .vertical-middle {
       top: auto;
       left: auto;
       -moz-transform: none;
@@ -74,20 +74,20 @@ html, body, .content {
       -o-transform: none;
       -webkit-transform: none;
       transform: none; } }
-  .info .fill {
+  #info .fill {
     fill: #3987c9; }
-  .info .graticule {
+  #info .graticule {
     fill: none;
     stroke: #777;
     stroke-width: .5px;
     stroke-opacity: .5; }
-  .info .land {
+  #info .land {
     fill: #222; }
-  .info .boundary {
+  #info .boundary {
     fill: none;
     stroke: #fff;
     stroke-width: .5px; }
-  .info #tooltip {
+  #info #tooltip {
     display: none;
     position: absolute;
     text-align: center;
@@ -99,7 +99,7 @@ html, body, .content {
     border: 0;
     border-radius: 8px;
     pointer-events: none; }
-    .info #tooltip p {
+    #info #tooltip p {
       position: relative;
       top: 50%;
       -moz-transform: translateY(-50%);
@@ -107,36 +107,48 @@ html, body, .content {
       -o-transform: translateY(-50%);
       -webkit-transform: translateY(-50%);
       transform: translateY(-50%); }
-  .info #timeline {
+  #info #timeline {
     overflow: auto; }
-    .info #timeline circle {
+    #info #timeline circle {
       r: 7px; }
-    .info #timeline text {
+    #info #timeline text {
       font-size: 15px;
       fill: white; }
-    .info #timeline path.domain {
+    #info #timeline path.domain {
       stroke: white; }
-  .info #globe g circle {
+  #info #globe g circle {
     r: 2px; }
-  .info .links {
+  #info .links {
     padding-top: 25px;
     padding-bottom: 25px; }
 
-.googlemap {
+#googlemap, #googlemap #map, #googlemap .container-fluid {
   height: 100%; }
-  .googlemap #map-container {
-    height: 100%; }
 
-.socket {
+#googlemap .map-container {
+  height: calc(100% - 100px);
+  padding-top: 15px; }
+
+#googlemap .col-sm-2, #googlemap .col-sm-4 {
+  margin-top: 10px; }
+
+#googlemap p {
+  margin: 8px 0 0px; }
+
+@media (min-width: 768px) {
+  #googlemap .map-container {
+    height: calc(100% - 50px); } }
+
+#socket {
   height: 100%; }
-  .socket .container-fluid {
+  #socket .container-fluid {
     height: 100%; }
-    .socket .container-fluid .row {
+    #socket .container-fluid .row {
       height: 100%; }
-  .socket .chat-wrapper {
+  #socket .chat-wrapper {
     position: relative;
     height: 100%; }
-  .socket .chat-box {
+  #socket .chat-box {
     border: 1px solid #848282;
     background-color: #e5e5e5;
     padding: 10px 0;
@@ -146,7 +158,7 @@ html, body, .content {
     bottom: 0;
     height: 80%;
     position: absolute; }
-  .socket #message-box {
+  #socket #message-box {
     position: absolute;
     width: auto !important;
     height: auto !important;
@@ -155,12 +167,12 @@ html, body, .content {
     left: 0;
     right: 0;
     overflow-y: scroll; }
-  .socket #message-box::-webkit-scrollbar {
+  #socket #message-box::-webkit-scrollbar {
     width: 10px; }
-  .socket #message-box::-webkit-scrollbar-thumb {
+  #socket #message-box::-webkit-scrollbar-thumb {
     border-radius: 10px;
     background-color: grey; }
-  .socket #input-box {
+  #socket #input-box {
     resize: none;
     height: 75px;
     margin: 20px 0px 0px 0px;
@@ -171,32 +183,32 @@ html, body, .content {
     box-sizing: border-box;
     left: 5%; }
   @media (max-width: 760px) {
-    .socket .chat-box {
+    #socket .chat-box {
       right: 0; }
-    .socket .chat-wrapper {
+    #socket .chat-wrapper {
       height: 300px; } }
 
-.d3 .main-content {
+#d3 .main-content {
   background-color: black; }
 
-.d3 .fill {
+#d3 .fill {
   fill: #3987c9; }
 
-.d3 .graticule {
+#d3 .graticule {
   fill: none;
   stroke: #777;
   stroke-width: .5px;
   stroke-opacity: .5; }
 
-.d3 .land {
+#d3 .land {
   fill: #222; }
 
-.d3 .boundary {
+#d3 .boundary {
   fill: none;
   stroke: #fff;
   stroke-width: .5px; }
 
-.d3 #tooltip {
+#d3 #tooltip {
   display: none;
   position: absolute;
   text-align: center;
@@ -208,7 +220,7 @@ html, body, .content {
   border: 0;
   border-radius: 8px;
   pointer-events: none; }
-  .d3 #tooltip p {
+  #d3 #tooltip p {
     position: relative;
     top: 50%;
     -moz-transform: translateY(-50%);
@@ -217,60 +229,60 @@ html, body, .content {
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%); }
 
-.d3 #timeline {
+#d3 #timeline {
   overflow: auto; }
-  .d3 #timeline circle {
+  #d3 #timeline circle {
     r: 7px; }
-  .d3 #timeline text {
+  #d3 #timeline text {
     font-size: 15px;
     fill: white; }
-  .d3 #timeline path.domain {
+  #d3 #timeline path.domain {
     stroke: white; }
 
-.d3 #globe g circle {
+#d3 #globe g circle {
   r: 2px; }
 
-.d3 .links {
+#d3 .links {
   padding-top: 25px;
   padding-bottom: 25px; }
 
-.babylon {
+#babylon {
   overflow: hidden;
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0; }
-  .babylon #renderCanvas {
+  #babylon #renderCanvas {
     width: 100%;
     height: 100%;
     -ms-touch-action: none;
     touch-action: none; }
 
-.nike .btn {
+#nike .btn {
   width: 100%; }
 
-.nike a {
+#nike a {
   color: white; }
 
 @media (min-width: 768px) {
-  .nike .btn {
+  #nike .btn {
     width: 150px; } }
 
-.login {
+#login {
   position: relative; }
 
-.game {
+#game {
   height: 100%; }
-  .game .container-fluid {
+  #game .container-fluid {
     height: 100%; }
-    .game .container-fluid .row {
+    #game .container-fluid .row {
       height: 100%; }
-      .game .container-fluid .row .col-sm-7 {
+      #game .container-fluid .row .col-sm-7 {
         height: 100%; }
-  .game .chat-wrapper {
+  #game .chat-wrapper {
     position: relative;
     height: 100%; }
-  .game .chat-box {
+  #game .chat-box {
     border: 1px solid #848282;
     background-color: #e5e5e5;
     padding: 10px 0;
@@ -280,7 +292,7 @@ html, body, .content {
     bottom: 0;
     height: 70%;
     position: absolute; }
-  .game #message-box {
+  #game #message-box {
     position: absolute;
     width: auto !important;
     height: auto !important;
@@ -289,12 +301,12 @@ html, body, .content {
     left: 0;
     right: 0;
     overflow-y: scroll; }
-  .game #message-box::-webkit-scrollbar {
+  #game #message-box::-webkit-scrollbar {
     width: 10px; }
-  .game #message-box::-webkit-scrollbar-thumb {
+  #game #message-box::-webkit-scrollbar-thumb {
     border-radius: 10px;
     background-color: grey; }
-  .game #input-box {
+  #game #input-box {
     resize: none;
     height: 75px;
     margin: 20px 0px 0px 0px;
@@ -305,13 +317,24 @@ html, body, .content {
     box-sizing: border-box;
     left: 5%; }
   @media (max-width: 760px) {
-    .game .chat-box {
+    #game .chat-box {
       right: 0; }
-    .game .chat-wrapper {
+    #game .chat-wrapper {
       height: 300px; } }
 
-.flappypig {
+#flappy {
   background-color: black; }
+
+#whereami, #whereami #map, #whereami .container-fluid {
+  height: 100%; }
+
+#whereami .map-container {
+  height: calc(100% - 100px);
+  padding-top: 15px; }
+
+@media (min-width: 768px) {
+  #whereami .map-container {
+    height: calc(100% - 50px); } }
 
 .navbar-inverse {
   margin: 0;

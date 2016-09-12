@@ -1,9 +1,9 @@
-<div class="info">
+<div id="info" >
     <!-- navbar -->
     <navbar></navbar>
     <!-- main content -->
     <div class="main-content text-center">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-sm-6">
                     <div class="vertical-middle">
@@ -29,7 +29,7 @@
     </div>
 
     <div id="tooltip"><p>{{tip}}</p></div>
-    
+
     <bubble ng-repeat="bubble in bubbles" class="bubble" size="bubble.size" x="bubble.x" y="bubble.y" color="bubble.color" />
 
 </div>

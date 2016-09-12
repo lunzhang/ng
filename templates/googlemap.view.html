@@ -1,8 +1,27 @@
-<div class="googlemap">
-  <div>
-
+<div id="googlemap">
+  <navbar></navbar>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-2 col-xs-3">
+        <p>
+          Latitude:
+        </p>
+      </div>
+      <div class="col-sm-4 col-xs-9">
+        <input class="form-control" type="text" ng-model="latitude" ng-change="positionChanged()">
+      </div>
+      <div class="col-sm-2 col-xs-3">
+        <p>
+          Longitude:
+        </p>
+      </div>
+      <div class="col-sm-4 col-xs-9">
+        <input class="form-control" type="text" ng-model="longitude" ng-change="positionChanged()">
+      </div>
+    </div>
+    <div class="row map-container">
+      <div id="map"></div>
+    </div>
   </div>
-  <div id="map-container">
 
-  </div>
 </div>
