@@ -18,16 +18,7 @@ app.directive('navbar', function () {
                     '<a href="#/info">Home</a>'+
                   '</li>'+
                     '<li >'+
-                      '<a href="#/flappypig">FlappyPig</a>'+
-                    '</li>'+
-                    '<li >'+
-                      '<a href="#/nike">Nike</a>'+
-                    '</li>'+
-                    '<li >'+
-                      '<a href="#/spybox/login">SpyBox</a>'+
-                    '</li>'+
-                    '<li >'+
-                      '<a href="#/googlemap">GoogleMap</a>'+
+                      '<a href="#/projects">Projects</a>'+
                     '</li>'+
                     '<li>'+
                       '<a href="Lun.Zhang.Resume.pdf">Resume</a>'+

@@ -7,15 +7,20 @@ app.config(function ($stateProvider, $urlRouterProvider) {
     templateUrl: 'templates/info.view.html',
     controller: 'infoController'
   })
+  .state('projects', {
+    url: '/projects',
+    templateUrl: 'templates/projects.view.html',
+    controller: 'projectsController'
+  })
   .state('googlemap', {
     url: '/googlemap',
     templateUrl: 'templates/googlemap.view.html',
     controller: 'googlemapController'
   })
-  .state('whereami', {
-    url: '/whereami',
-    templateUrl: 'templates/whereami.view.html',
-    controller: 'whereamiController'
+  .state('game', {
+    url: '/game',
+    templateUrl: 'templates/game.view.html',
+    controller: 'gameController'
   })
   .state('socket', {
     url: '/socket',

@@ -1,9 +1,8 @@
 app.controller('socketController', ['$scope', '$timeout', '$http', function ($scope, $timeout, $http) {
-        
+
         var socket = io.connect('localhost:3000');
         var textarea = $('#input-box');
         var messageBox = $('#message-box');
-
 
         textarea.on('keydown', function (event) {
             if (event.keyCode == 13 && !event.shiftKey) {
@@ -12,7 +11,7 @@ app.controller('socketController', ['$scope', '$timeout', '$http', function ($sc
                 return false;
             }
         });
-        
+
         socket.on('message', function (msg) {
             $scope.messages.push(msg);
             $scope.$apply();

@@ -2,16 +2,17 @@
 
   <navbar></navbar>
 
-  <div class="row text-right">
-    <span class="btn btn-primary" ng-if="showCurrent" ng-click="toggleShoes()">
-      New
-    </span>
-    <span class="btn btn-primary" ng-if="showNew" ng-click="toggleShoes()">
-      Current
-    </span>
-  </div>
-
   <div class="container-fluid shoes-container">
+    <div class="row text-right">
+      <div class="col-xs-12">
+        <span class="btn btn-primary" ng-if="showCurrent" ng-click="toggleShoes()">
+          New
+        </span>
+        <span class="btn btn-primary" ng-if="showNew" ng-click="toggleShoes()">
+          Current
+        </span>
+      </div>
+    </div>
     <div class="row">
       <div ng-show="showCurrent">
         <div class="col-sm-12 text-center">

@@ -6,12 +6,22 @@ $large-only: "(min-width:1200px)";
 
 navbar{
   & + div{
-    padding-top:65px;
+    padding-top:80px;
   }
 }
 
 html, body, .content {
   height: 100%;
+}
+
+.fa.fa-fw.fa-github {
+  border-radius: 150%;
+  border-color: red;
+  color: #FF33FF;
+}
+
+.fa.fa-fw.fa-github:hover {
+  color: purple;
 }
 
 #info {
@@ -28,16 +38,6 @@ html, body, .content {
 
   .fa.fa-fw {
     font-size: 30px;
-  }
-
-  .fa.fa-fw.fa-github {
-    border-radius: 150%;
-    border-color: red;
-    color: #FF33FF;
-  }
-
-  .fa.fa-fw.fa-github:hover {
-    color: purple;
   }
 
   h1, h2, h3, h4, h5, h6 {
