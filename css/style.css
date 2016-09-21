@@ -1,3 +1,6 @@
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Nunito', sans-serif; }
+
 navbar + div {
   padding-top: 80px; }
 
@@ -24,8 +27,6 @@ html, body, .content {
     z-index: 10; }
   #info .fa.fa-fw {
     font-size: 30px; }
-  #info h1, #info h2, #info h3, #info h4, #info h5, #info h6 {
-    font-family: 'Nunito', sans-serif; }
   #info h1 {
     border-bottom: 2.2px #4582ec solid;
     color: #A56262; }
@@ -338,6 +339,18 @@ html, body, .content {
   #whereami .map-container {
     height: calc(100% - 50px); } }
 
+#projects h2 {
+  text-shadow: 5px 0px 8px grey; }
+
+#projects .col-xs-6 {
+  min-height: 100px; }
+
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
 .navbar-inverse {
   margin: 0;
   background-color: black;
@@ -346,3 +359,5 @@ html, body, .content {
   .navbar-inverse .navbar-nav > li > a {
     color: white;
     font-size: 22px; }
+    .navbar-inverse .navbar-nav > li > a:hover {
+      color: #4582ec; }
