@@ -1,0 +1,23 @@
+{
+  "name": "lunzhang.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "lite-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lunzhang/lunzhang.github.io.git"
+  },
+  "author": "lun zhang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lunzhang/lunzhang.github.io/issues"
+  },
+  "homepage": "https://github.com/lunzhang/lunzhang.github.io#readme",
+  "devDependencies": {
+    "lite-server": "^2.2.2"
+  }
+}

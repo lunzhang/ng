@@ -17,6 +17,9 @@ app.directive('navbar', function () {
                   '<li>'+
                     '<a href="#/info">Home</a>'+
                   '</li>'+
+                  '<li>'+
+                    '<a href="https://lunzhang.github.io/ng2" target="_self">Ng2</a>'+
+                  '</li>'+
                     '<li >'+
                       '<a href="#/projects">Projects</a>'+
                     '</li>'+
