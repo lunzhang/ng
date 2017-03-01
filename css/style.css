@@ -28,11 +28,15 @@ html, body, .content {
   #info .fa.fa-fw {
     font-size: 30px; }
   #info h1 {
-    border-bottom: 2.2px #4582ec solid;
-    color: #A56262; }
-  #info h2 {
+
     color: #E3ECFF; }
-  #info h3 {
+  #info .main-content {
+    height:100%; }
+  #info .container-fluid {
+    height:100%; }
+    #info .row {
+      height:100%; }
+  #info .container-fluid {
     font-size: 1.5em;
     color: #E3ECFF; }
   #info img.center {
@@ -46,81 +50,16 @@ html, body, .content {
     height: 220px;
     background: url(../img/profile.jpg) no-repeat;
     background-position: 50% 0%; }
-  #info .img-circular:hover {
-    opacity: 1; }
-  #info .main-content {
-    background-color: black; }
   #info .vertical-middle {
     position: relative;
-    top: 50%;
+    top: 40%;
     left: 50%;
-    -moz-transform: translateX(-50%) translateY(50%);
-    -ms-transform: translateX(-50%) translateY(50%);
-    -o-transform: translateX(-50%) translateY(50%);
-    -webkit-transform: translateX(-50%) translateY(50%);
-    transform: translateX(-50%) translateY(50%); }
-  @media (max-width: 760px) {
-    #info h1 {
-      font-size: 2em; }
-    #info .img-circular {
-      width: 160px;
-      height: 160px; }
-    #info h3 {
-      font-size: 1em; }
-    #info #globe {
-      padding-top: 15px; }
-    #info .vertical-middle {
-      top: auto;
-      left: auto;
-      -moz-transform: none;
-      -ms-transform: none;
-      -o-transform: none;
-      -webkit-transform: none;
-      transform: none; } }
-  #info .fill {
-    fill: #3987c9; }
-  #info .graticule {
-    fill: none;
-    stroke: #777;
-    stroke-width: .5px;
-    stroke-opacity: .5; }
-  #info .land {
-    fill: #222; }
-  #info .boundary {
-    fill: none;
-    stroke: #fff;
-    stroke-width: .5px; }
-  #info #tooltip {
-    display: none;
-    position: absolute;
-    text-align: center;
-    width: 150px;
-    height: 75px;
-    line-height: 90px;
-    font: 12px sans-serif;
-    background: lightsteelblue;
-    border: 0;
-    border-radius: 8px;
-    pointer-events: none; }
-    #info #tooltip p {
-      position: relative;
-      top: 50%;
-      -moz-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-      -o-transform: translateY(-50%);
-      -webkit-transform: translateY(-50%);
-      transform: translateY(-50%); }
-  #info #timeline {
-    overflow: auto; }
-    #info #timeline circle {
-      r: 7px; }
-    #info #timeline text {
-      font-size: 15px;
-      fill: white; }
-    #info #timeline path.domain {
-      stroke: white; }
-  #info #globe g circle {
-    r: 2px; }
+    -moz-transform: translateX(-50%) translateY(40%);
+    -ms-transform: translateX(-50%) translateY(40%);
+    -o-transform: translateX(-50%) translateY(40%);
+    -webkit-transform: translateX(-50%) translateY(40%);
+    transform: translateX(-50%) translateY(40%);}
+
   #info .links {
     padding-top: 25px;
     padding-bottom: 25px; }
@@ -186,14 +125,26 @@ html, body, .content {
     box-sizing: border-box;
     left: 5%; }
   @media (max-width: 760px) {
+    #info h1 {
+      font-size:24px;
+    }
     #socket .chat-box {
       right: 0; }
     #socket .chat-wrapper {
       height: 300px; } }
-
+#d3 h3{
+  color:white;
+}
 #d3 .main-content {
-  background-color: black; }
-
+  background-color: black;
+height:100%;
+}
+#d3 .container-fluid{
+  background-color: black;
+}
+#d3{
+  height:100%;
+}
 #d3 .fill {
   fill: #3987c9; }
 
@@ -202,7 +153,11 @@ html, body, .content {
   stroke: #777;
   stroke-width: .5px;
   stroke-opacity: .5; }
-
+#flappy h3{
+  color:white;
+  text-align: center;
+  margin-bottom: 25px;
+}
 #d3 .land {
   fill: #222; }
 
@@ -266,7 +221,12 @@ html, body, .content {
 
 #nike a {
   color: white; }
-
+#nike .shoe{
+  padding: 10px 0px 10px 0px;
+}
+#nike .row {
+  padding:10px 0px 10px 0px;
+}
 @media (min-width: 768px) {
   #nike .btn {
     width: 150px; } }

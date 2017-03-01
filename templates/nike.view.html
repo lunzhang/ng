@@ -1,8 +1,13 @@
 <div id="nike" ng-cloak >
-
   <navbar></navbar>
 
   <div class="container-fluid shoes-container">
+    <div class="row text-center">
+      <div class="col-xs-12">
+        <h4>Fetchs Nike's api using jsonp for Men's clearance shoes.  </h4>
+        <h4>Store previous data into local storage, to show new shoes since last visit.  </h4>
+      </div>
+    </div>
     <div class="row text-right">
       <div class="col-xs-12">
         <span class="btn btn-primary" ng-if="showCurrent" ng-click="toggleShoes()">
@@ -16,21 +21,21 @@
     <div class="row">
       <div ng-show="showCurrent">
         <div class="col-sm-12 text-center">
-          Current Shoes
+          <h4>Current Shoes - New Price / Old Price</h4>
         </div>
-        <div  ng-repeat="shoe in currentShoes | orderBy:'newPrice'" class="col-sm-3">
+        <div  ng-repeat="shoe in currentShoes | orderBy:'newPrice'" class="col-sm-3 shoe">
           <span>
-            {{shoe.title}} ${{shoe.newPrice}}/${{shoe.oldPrice}}
+            {{shoe.title}} - ${{shoe.newPrice}}/${{shoe.oldPrice}}
           </span>
         </div>
       </div>
       <div ng-show="showNew">
         <div class="col-sm-12 text-center">
-          Newly Added Shoes
+          <h4>Newly Added Shoes - New Price / Old Price </4>
         </div>
-        <div ng-repeat="shoe in newShoes | orderBy:'newPrice'" class="col-sm-3">
+        <div ng-repeat="shoe in newShoes | orderBy:'newPrice'" class="col-sm-3 shoe">
           <span>
-            {{shoe.title}} ${{shoe.newPrice}}/${{shoe.oldPrice}}
+            {{shoe.title}} - ${{shoe.newPrice}}/${{shoe.oldPrice}}
           </span>
         </div>
       </div>

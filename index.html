@@ -8,14 +8,10 @@
   <!-- Bootstrap Themes -->
   <link href="lib/bootstrap/bootstrap.min.css" rel="stylesheet">
   <!-- Custom CSS -->
-  <link href="css/style.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
   <!-- Custom Fonts -->
   <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <link href='https://fonts.googleapis.com/css?family=Nunito:300' rel='stylesheet' type='text/css'>
-  <!-- Babylon -->
-  <script src="http://cdn.babylonjs.com/2-3/babylon.max.js"></script>
-  <!-- Socket io -->
-  <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
   <!-- Angular -->
   <script src="lib/angular/angular.min.js"></script>
   <script src="lib/ui-router/angular-ui-router.min.js"></script>
@@ -23,7 +19,11 @@
   <!-- Angular router -->
   <script src="app.js"></script>
   <!-- Controllers -->
-  <script src="controllers.min.js"></script>
+  <script src="controllers/info.controller.js"></script>
+  <script src="controllers/nike.controller.js"></script>
+  <script src="controllers/d3.controller.js"></script>
+  <script src="controllers/flappypig.controller.js"></script>
+  <script src="controllers/googlemap.controller.js"></script>
   <!-- Directives -->
   <script src="directives/bubble.directive.js"></script>
   <script src="directives/navbar.directive.js"></script>
@@ -32,8 +32,6 @@
   <script src="lib/jQuery/jquery.js"></script>
   <!-- Bootstrap Core JavaScript -->
   <script src="lib/bootstrap/bootstrap.min.js"></script>
-  <!-- Scroll Glue -->
-  <script src="lib/scrollglue/scrollglue.js"></script>
   <!-- ngStorage -->
   <script src="lib/ngStorage/ngStorage.min.js"></script>
   <!-- D3 JavaScript -->
@@ -47,18 +45,10 @@
   <script src="lib/flappypig/flappypig.js"></script>
   <!-- game -->
   <script src="game/app.js"></script>
-  <!-- spy box -->
-  <script src="spybox/controller/game.controller.js"></script>
-  <script src="spybox/controller/menu.controller.js"></script>
-  <script src="spybox/controller/login.controller.js"></script>
-  <script src="spybox/service/spy.service.js"></script>
   <!-- google map -->
   <script src="https://maps.google.com/maps/api/js?key=AIzaSyCY_foanRzzUBZbMdPrxnT0mcyMrufnoew"></script>
-
 </head>
-
 <body>
-
   <!-- Angular View -->
   <div class="content" ui-view></div>
 </body>

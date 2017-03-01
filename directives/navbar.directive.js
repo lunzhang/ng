@@ -17,14 +17,17 @@ app.directive('navbar', function () {
                   '<li>'+
                     '<a href="#/info">Home</a>'+
                   '</li>'+
-                  '<li>'+
-                    '<a href="https://lunzhang.github.io/ng2" target="_self">Ng2</a>'+
-                  '</li>'+
-                    '<li >'+
-                      '<a href="#/projects">Projects</a>'+
+                    '<li>'+
+                    '<a href="#/nike">Nike</a>'+
                     '</li>'+
                     '<li>'+
-                      '<a href="Lun.Zhang.Resume.pdf">Resume</a>'+
+                      '<a href="#/d3">D3</a>'+
+                    '</li>'+
+                    '<li >'+
+                      '<a href="#/flappypig">Flappy Pig</a>'+
+                    '</li>'+
+                    '<li>'+
+                      '<a href="#/googlemap">Google Map</a>'+
                     '</li>'+
                   '</ul>'+
                 '</div>'+

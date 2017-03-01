@@ -1,1 +1,1 @@
-var app = angular.module('app', ['ui.router','luegg.directives','ngStorage','ngSanitize']);
+var app = angular.module('app', ['ui.router','ngStorage','ngSanitize']);

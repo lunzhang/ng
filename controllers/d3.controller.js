@@ -231,4 +231,4 @@
               .datum(data).call(chart);
   })();
 
-    }]);
+}]);
