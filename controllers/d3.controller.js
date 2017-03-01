@@ -41,9 +41,9 @@
           .attr("xlink:href", "#sphere");
       //loads world map and country names
       queue()
-          .defer(d3.json, "/lib/d3/world-110m.json")
-          .defer(d3.tsv, "/lib/d3/world-country-names.tsv")
-          .defer(d3.csv, "/lib/d3/locations.csv")
+          .defer(d3.json, "/ng/lib/d3/world-110m.json")
+          .defer(d3.tsv, "/ng/lib/d3/world-country-names.tsv")
+          .defer(d3.csv, "/ng/lib/d3/locations.csv")
           .await(ready);
       //when loaded
       function ready(error, world, names, locations) {
